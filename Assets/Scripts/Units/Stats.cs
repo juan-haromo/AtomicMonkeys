@@ -11,6 +11,7 @@ public class Stats : MonoBehaviour
     [SerializeField] private int price;
     [SerializeField] private bool isdeath = false;
     [SerializeField] private int type;
+    [SerializeField] private float attackSpeed;
 
     // funcions thats return valeus
     #region Valeus
@@ -36,6 +37,11 @@ public class Stats : MonoBehaviour
     public bool IsDeath() 
     {
         return isdeath;
+    }
+
+    public float AttackSpeed()
+    {
+        return attackSpeed;
     }
     #endregion
 
