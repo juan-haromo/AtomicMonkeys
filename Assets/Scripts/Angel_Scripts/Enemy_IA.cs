@@ -7,14 +7,14 @@ using UnityEngine;
 public class Enemy_IA : MonoBehaviour
 {
     // cosas nesesarias
-    [SerializeField] private List<GameObject> spawnPoints;
-    [SerializeField]private int ammount = 0;
-    [SerializeField]private int choiceLine = 0;
-    [SerializeField]private int LineAmount = 0;
+    [SerializeField] private int ammount = 0;
+    [SerializeField] private int choiceLine = 0;
+    [SerializeField] private int LineAmount = 0;
     [SerializeField] private const int totalLines = 5;
+    Economy_IA EIA;
     //Acceso al wave manager
     //WaveManager.instance
-    // economi.instance.money
+    // economy.instance.money
     void Update()
     {
         switch (Choice())
@@ -23,13 +23,13 @@ public class Enemy_IA : MonoBehaviour
                 PlaceTorret();
                 break;
             case 2:
-                Placeunit();
+                Placeunit(choiceLine);
                 break;
             case 3:
                 PlaceEconomy();
                 break;
             default:
-                Debug.Log(" no se eligio nada");
+                Debug.Log("waiting");
                 break;
         }
     }
@@ -66,6 +66,7 @@ public class Enemy_IA : MonoBehaviour
         ammount = totalAmount();
         if (ammount > 2)
         {
+            lineMoreAmount();
            if(LineAmount > 2 )
             {
                 return 2;
@@ -89,8 +90,25 @@ public class Enemy_IA : MonoBehaviour
 
     }
     // here will place an unit
-    void Placeunit()
+    void Placeunit(int line)
     {
+        int auxTanks, auxMelee, auxRange;
+        auxTanks = WaveManager.instance.enemies[line].tankAmount;
+        auxMelee = WaveManager.instance.enemies[line].meleeAmount;
+        auxRange = WaveManager.instance.enemies[line].rangeAmount;
+
+        if(auxRange > auxTanks && auxRange > auxMelee)
+        {
+            
+        }
+        else if (auxTanks > auxRange && auxTanks >auxMelee)
+        {
+
+        }
+        else if(auxMelee > auxRange && auxMelee >auxTanks)
+        {
+
+        }
 
     }
 
