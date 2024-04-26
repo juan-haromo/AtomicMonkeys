@@ -10,7 +10,7 @@ public class Base_shoot : MonoBehaviour
     [SerializeField] private bool canShoot = false;
     [SerializeField] private float indexTime;
     [SerializeField] private int attackSpeed;
-    [SerializeField] private float torretDamage;
+    [SerializeField] private int torretDamage;
 
     private void Update()
     {

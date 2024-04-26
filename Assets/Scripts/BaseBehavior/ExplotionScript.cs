@@ -5,7 +5,7 @@ using UnityEngine;
 public class ExplotionScript : MonoBehaviour
 {
     public float explotionLifeTime;
-    public float explotionDamage;
+    public int explotionDamage;
 
     // Start is called before the first frame update
     void Start()
@@ -13,11 +13,11 @@ public class ExplotionScript : MonoBehaviour
         Invoke("DestroyObject", explotionLifeTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<BaseHealth>().ChangeHealth(explotionDamage);
+            collision.gameObject.GetComponent<UnitMovement>().UpdateHealth(explotionDamage);
         }
     }
 

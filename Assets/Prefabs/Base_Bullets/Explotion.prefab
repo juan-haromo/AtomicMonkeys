@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 2264418243569769944}
   - component: {fileID: 8396424064739577554}
   - component: {fileID: 1976571165272650408}
-  - component: {fileID: 7467133657693301447}
   - component: {fileID: 3395966265118186605}
+  - component: {fileID: 7958433763450960377}
   m_Layer: 0
-  m_Name: BaseProjectile_Basic 1
+  m_Name: Explotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 779634129092594812}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.22, y: 1.61, z: 0.91}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -109,23 +109,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7467133657693301447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779634129092594812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daf24f18df1e6cb4aa577a1993ec0805, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletDamage: -1
-  bulletSpeed: 1
-  bulletLifeTime: 5
-  direction: {x: 0, y: 0, z: 0}
-  target: {fileID: 0}
 --- !u!54 &3395966265118186605
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -153,3 +136,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
+--- !u!114 &7958433763450960377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779634129092594812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0a8247111e40d498ac303a9f13d333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explotionLifeTime: 0.4
+  explotionDamage: 2
