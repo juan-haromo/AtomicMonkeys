@@ -9,7 +9,7 @@ public class Stats : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private int price;
     [SerializeField] private bool isdeath = false;
-
+    [SerializeField] private int type;
     public int Health()
     {
         return health;
