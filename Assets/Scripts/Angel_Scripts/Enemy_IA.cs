@@ -11,10 +11,13 @@ public class Enemy_IA : MonoBehaviour
     [SerializeField] private int choiceLine = 0;
     [SerializeField] private int LineAmount = 0;
     [SerializeField] private const int totalLines = 5;
-    Economy_IA EIA;
+    [SerializeField] Economy_IA EIA;
+    [SerializeField] private GameObject tank;
+    [SerializeField] private GameObject melee;
+    [SerializeField] private GameObject range;
     //Acceso al wave manager
     //WaveManager.instance
-    // economy.instance.money
+    // economy.instance.moneyS
     void Update()
     {
         switch (Choice())
@@ -97,17 +100,20 @@ public class Enemy_IA : MonoBehaviour
         auxMelee = WaveManager.instance.enemies[line].meleeAmount;
         auxRange = WaveManager.instance.enemies[line].rangeAmount;
 
-        if(auxRange > auxTanks && auxRange > auxMelee)
+        if (auxRange >= auxTanks && auxRange >= auxMelee)
         {
-            
+            Spawners_IA.instance.ChangeUnitToSpawn(tank);
+            Spawners_IA.instance.IA_Spawns(line);
         }
-        else if (auxTanks > auxRange && auxTanks >auxMelee)
+        else if (auxTanks >= auxRange && auxTanks >= auxMelee)
         {
-
+            Spawners_IA.instance.ChangeUnitToSpawn(melee);
+            Spawners_IA.instance.IA_Spawns(line);
         }
-        else if(auxMelee > auxRange && auxMelee >auxTanks)
+        else if (auxMelee >= auxRange && auxMelee >= auxTanks)
         {
-
+            Spawners_IA.instance.ChangeUnitToSpawn(range);
+            Spawners_IA.instance.IA_Spawns(line);
         }
 
     }
@@ -115,7 +121,7 @@ public class Enemy_IA : MonoBehaviour
     // here will buy economy
     void PlaceEconomy()
     {
-
+        Economy_IA.instance.MoneyUpgrade();
     }
     #endregion 
 }
