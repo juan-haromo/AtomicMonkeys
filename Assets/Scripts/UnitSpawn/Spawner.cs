@@ -25,36 +25,37 @@ public class Spawner : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Q))
         {
             SpawnUnit(unitToSpawn, 0);
-            unitToSpawn = null;
+            WaveManager.instance.enemies[0].AddEnemy(unitToSpawn.GetComponentInChildren<Stats>().Type); 
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
             SpawnUnit(unitToSpawn, 1);
-            unitToSpawn = null;
+            WaveManager.instance.enemies[1].AddEnemy(unitToSpawn.GetComponentInChildren<Stats>().Type);
         }
         if (Input.GetKeyUp(KeyCode.E))
         {
             SpawnUnit(unitToSpawn, 2);
-            unitToSpawn = null;
+            WaveManager.instance.enemies[2].AddEnemy(unitToSpawn.GetComponentInChildren<Stats>().Type);
         }
         if (Input.GetKeyUp(KeyCode.R))
         {
             SpawnUnit(unitToSpawn, 3);
-            unitToSpawn = null;
+            WaveManager.instance.enemies[3].AddEnemy(unitToSpawn.GetComponentInChildren<Stats>().Type);
         }
         if (Input.GetKeyUp(KeyCode.T))
         {
             SpawnUnit(unitToSpawn, 4);
-            unitToSpawn = null;
+            WaveManager.instance.enemies[4].AddEnemy(unitToSpawn.GetComponentInChildren<Stats>().Type);
         }
     }
 
-    public void SpawnUnit(GameObject unitToSpwan, int positionToSpwan)
+    public void SpawnUnit(GameObject _unitToSpwan, int positionToSpwan)
     {
-        //Get enemy script to check price
-        if (Economy.instance.Buy(unitToSpawn.GetComponentInChildren<Stats>().Cost))//Script economy
+        if (Economy.instance.Buy(_unitToSpwan.GetComponentInChildren<Stats>().Cost))
         {
-            Instantiate(unitToSpwan, spawnPoints[positionToSpwan].position, unitToSpwan.transform.rotation);
+            Instantiate(_unitToSpwan, spawnPoints[positionToSpwan].position, _unitToSpwan.transform.rotation);
+            WaveManager.instance.enemies[positionToSpwan].AddEnemy(_unitToSpwan.GetComponentInChildren<Stats>().Type);
+            unitToSpawn = null;
         }
     }
 
