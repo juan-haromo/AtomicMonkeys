@@ -14,8 +14,7 @@ public class WaveManager : MonoBehaviour
         int meleeAmount = 0;
         int tankAmount = 0;
         int rangeAmount = 0;
-        int kamikazeAmount = 0;
-        int generatorAmount = 0;
+
 
         public void AddEnemy(int type)
         {
@@ -29,12 +28,6 @@ public class WaveManager : MonoBehaviour
                     break;
                 case 2:
                     rangeAmount++;
-                    break;
-                case 3:
-                    kamikazeAmount++;
-                    break;
-                case 4:
-                    generatorAmount++;
                     break;
                 default:
                     break;
@@ -54,15 +47,8 @@ public class WaveManager : MonoBehaviour
                 case 2:
                     rangeAmount--;
                     break;
-                case 3:
-                    kamikazeAmount--;
-                    break;
-                case 4:
-                    generatorAmount--;
-                    break;
                 default:
                     break;
-
             }
         }
     }
@@ -74,7 +60,12 @@ public class WaveManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
-            towers = new List<List<bool>>();   
+            towers = new List<List<bool>>();
+            enemies = new List<Enemies>();
+            for(int i = 0; i < 5; i++)
+            {
+                enemies.Add(new Enemies());
+            }
         }
         else
         {

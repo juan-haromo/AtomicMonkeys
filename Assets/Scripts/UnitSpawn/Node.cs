@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Node : MonoBehaviour
@@ -8,23 +9,71 @@ public class Node : MonoBehaviour
     public int y;
 
     GameObject defensePlaced;
-    [SerializeField] GameObject wall;
-    [SerializeField] GameObject turret;
-    public bool objecToBuild;//true = wall, false = turret
+    public Color hoverColor;
+
+    private Renderer originalRenderer;
+    private Color startColor;
+
+
+    private void Start()
+    {
+        originalRenderer = GetComponent<Renderer>();
+        startColor = originalRenderer.material.color;
+    }
+
+    private void OnMouseEnter()
+    {
+        originalRenderer.material.color = hoverColor;
+    }
+
+    private void OnMouseExit()
+    {
+        originalRenderer.material.color = startColor;
+    }
+
+    private void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            BuildTurret();
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            SellTurret();
+        }
+    }
 
     public void BuildTurret()
     {
         if(defensePlaced == null)
         {
-            if(objecToBuild) 
+            if(DefenseManager.instance.objecToBuild && Economy.instance.Buy(DefenseManager.instance.wall.GetComponent<Stats>().Price()*(y+1))) 
             { 
-                defensePlaced = (GameObject)Instantiate(wall,transform.position,transform.rotation); 
+                defensePlaced = (GameObject)Instantiate(DefenseManager.instance.wall,transform.position,transform.rotation); 
+            }
+            else if(Economy.instance.Buy(DefenseManager.instance.wall.GetComponent<Stats>().Price()*(y+1)))
+            {
+                defensePlaced = (GameObject)Instantiate(DefenseManager.instance.turret, transform.position, transform.rotation);
             }
             else
             {
-                defensePlaced = (GameObject)Instantiate(turret, transform.position, transform.rotation);
+                return;
             }
             WaveManager.instance.towers[x][y] = true;
+        }
+    }
+
+    public void SellTurret()
+    {
+        if (defensePlaced)
+        {
+            if(defensePlaced.GetComponent<Stats>().IsMaxHealt()) 
+            {
+                Economy.instance.AddMoney(defensePlaced.GetComponent<Stats>().Price()*(y+1));
+            }
+            Destroy(defensePlaced);
+            defensePlaced = null;
+            WaveManager.instance.towers[x][y] = false;
         }
     }
 }
