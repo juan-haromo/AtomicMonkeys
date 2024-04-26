@@ -24,7 +24,7 @@ public class BaseAttack : MonoBehaviour
     private void shootBullet()
     {
         GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-        bullet.GetComponent<DefaultBulletScript>().setDirection(target);
+        bullet.GetComponent<DefaultBulletScript>().setDirection();//Add target parameter
     }
 
     private GameObject getFirstEnemy()

@@ -7,13 +7,19 @@ public class DefaultBulletScript : MonoBehaviour
     public float bulletDamage;
     public float bulletSpeed;
     public float bulletLifeTime;
-    public Vector2 direction;
-    private Rigidbody2D rb;
+    public Vector3 direction;
+    private Rigidbody rb;
+    public Transform target;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        target = GameObject.FindGameObjectWithTag("Enemy").transform;
+    }
+
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
         Invoke("destroyBullet", bulletLifeTime);
     }
 
@@ -22,7 +28,7 @@ public class DefaultBulletScript : MonoBehaviour
         rb.MovePosition(rb.position + direction * Time.fixedDeltaTime * bulletSpeed);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
@@ -36,8 +42,8 @@ public class DefaultBulletScript : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void setDirection(Vector2 target)
+    public void setDirection()
     {
-        direction = target - new Vector2(transform.position.x, transform.position.y);
+        direction = target.position - gameObject.transform.position;
     }
 }
