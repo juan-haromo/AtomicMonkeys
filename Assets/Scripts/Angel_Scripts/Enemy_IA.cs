@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class Enemy_IA : MonoBehaviour
 {
-    WaveManager wm;
     int choice = 0;
     void Start()
     {
-        wm = GetComponent<WaveManager>();
+        //Acceso al wave manager
+        //WaveManager.instance
     }
 
     void Update()

@@ -55,4 +55,9 @@ public class Economy : MonoBehaviour
         instance.moneyDisplay.color = Color.white;
     }
 
+    public void AddMoney(int amount)
+    {
+        money += amount;
+    }
+
 }
