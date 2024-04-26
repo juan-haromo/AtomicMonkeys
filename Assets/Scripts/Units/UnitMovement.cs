@@ -5,25 +5,36 @@ public class UnitMovement : MonoBehaviour
 {
     public float targetPosition;
     private bool collidedEnemy = false;
-    private bool isDead = false;
     private float movement;
     public GameObject stats;
-    //stats
     private void Awake()
     {
         movement = GetComponentInChildren<Stats>().MovementSpeed();
-        //Debug.Log(movement);
     }
-    //Velocidad de ataque 
 
     void Update()
     {
            
-        if (!isDead)
+        if (!collidedEnemy)
         {
             Movement();
+            Debug.Log("collelere collele collele");
+        }
+        else
+        {
+            Debug.Log("es hora de atacar");
+            attack();
         }
     }
+
+    #region attack
+
+    // heres the logic of a attack call
+    void attack()
+    {
+
+    }
+    #endregion
 
     #region movement
     private void Movement()
@@ -44,14 +55,15 @@ public class UnitMovement : MonoBehaviour
             }
         }
     }
+    #endregion
 
     //In the future, we must add an if to see if the collision is with a unit of the same tag or a different tag
     //If they have the same tag they should ignore each other
     void OnTriggerEnter(Collider other)
     {
-            collidedEnemy = true;
-            Debug.Log("chocaron");
-            //Health(other.gameObject.GetComponent<UnitMovement>().damage);
+        collidedEnemy = true;
+        Debug.Log("chocaron");
+        //Health(other.gameObject.GetComponent<UnitMovement>().damage);
     }
 
     void OnTriggerExit(Collider other)
@@ -59,20 +71,4 @@ public class UnitMovement : MonoBehaviour
         collidedEnemy = false;
         Debug.Log("Se pelo");
     }
-    #endregion
-
-    /*
-    private void Health(int damageTaken)
-    {
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            health -= damageTaken;
-            if (health <= 0)
-            {
-                Debug.Log("murio la unidad");
-                Destroy(gameObject);
-            }
-        }
-    }
-    */
 }
