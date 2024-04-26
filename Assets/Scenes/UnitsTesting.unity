@@ -337,8 +337,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.2131824, y: 2, z: 15.602027}
-  m_Center: {x: 1.1065912, y: 0, z: -0.455791}
+  m_Size: {x: 0.5, y: 2, z: 3}
+  m_Center: {x: 1, y: 0, z: 0}
 --- !u!54 &220395449
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -446,6 +446,7 @@ MonoBehaviour:
   damage: 2
   price: 0
   isdeath: 0
+  type: 0
 --- !u!1 &754005364
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,6 +496,7 @@ MonoBehaviour:
   damage: 2
   price: 0
   isdeath: 0
+  type: 0
 --- !u!1 &855050437
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,7 +614,7 @@ Transform:
   m_GameObject: {fileID: 1051847109}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: -12.41, y: 9.52, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -633,7 +635,7 @@ GameObject:
   - component: {fileID: 1085713547}
   - component: {fileID: 1085713546}
   m_Layer: 0
-  m_Name: Ally UnitPH (1)
+  m_Name: Enemy UnitPH
   m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -685,8 +687,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.9762828, y: 2, z: 15.602027}
-  m_Center: {x: -0.65418184, y: 0, z: -0.455791}
+  m_Size: {x: 0.5, y: 2, z: 3}
+  m_Center: {x: -1, y: 0, z: 0}
 --- !u!114 &1085713548
 MonoBehaviour:
   m_ObjectHideFlags: 0
