@@ -21,11 +21,11 @@ public class Economy_IA : MonoBehaviour
         money += (moneyValue * Time.deltaTime);
     }
 
-    void MoneyUpgrade()
+   public void MoneyUpgrade()
     {
         if (money > upgradeCost)
         {
-            Economy_IA.instance.moneyValue += (moneyValue * .75f);
+            Economy_IA.instance.moneyValue += (moneyValue * 2);
             Economy_IA.instance.money -= upgradeCost;
             Economy_IA.instance.upgradeCost = upgradeCost * 2;
         }

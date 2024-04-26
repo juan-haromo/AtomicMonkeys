@@ -1419,8 +1419,6 @@ GameObject:
   - component: {fileID: 452785429}
   - component: {fileID: 452785428}
   - component: {fileID: 452785427}
-  - component: {fileID: 452785426}
-  - component: {fileID: 452785425}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -1443,36 +1441,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 115420909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &452785425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452785423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecfd4bb29422a8f448c6f45878819aa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletRate: 1.5
-  enemies:
-  - {fileID: 0}
-  bulletPrefab: {fileID: 779634129092594812, guid: af48fca058c17c04daee78be84d408cc, type: 3}
---- !u!114 &452785426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452785423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70dc3b63edc9cb443b1756bd81f1bef4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  health: 0
 --- !u!65 &452785427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2989,7 +2957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   money: 0
   moneyValue: 1
-  upgradeCost: 0
+  upgradeCost: 5
 --- !u!1001 &1075266597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3142,8 +3110,6 @@ GameObject:
   - component: {fileID: 1109512591}
   - component: {fileID: 1109512590}
   - component: {fileID: 1109512589}
-  - component: {fileID: 1109512588}
-  - component: {fileID: 1109512593}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -3151,20 +3117,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1109512588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109512587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70dc3b63edc9cb443b1756bd81f1bef4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  health: 0
 --- !u!65 &1109512589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3253,22 +3205,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1244342816}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1109512593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109512587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecfd4bb29422a8f448c6f45878819aa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletRate: 1.5
-  enemies:
-  - {fileID: 0}
-  bulletPrefab: {fileID: 779634129092594812, guid: af48fca058c17c04daee78be84d408cc, type: 3}
 --- !u!1 &1119496952
 GameObject:
   m_ObjectHideFlags: 0
@@ -4486,6 +4422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1539968459}
   - component: {fileID: 1539968458}
+  - component: {fileID: 1539968460}
   m_Layer: 0
   m_Name: IA manager
   m_TagString: Untagged
@@ -4508,6 +4445,10 @@ MonoBehaviour:
   ammount: 0
   choiceLine: 0
   LineAmount: 0
+  EIA: {fileID: 0}
+  tank: {fileID: 0}
+  melee: {fileID: 0}
+  range: {fileID: 0}
 --- !u!4 &1539968459
 Transform:
   m_ObjectHideFlags: 0
@@ -4525,6 +4466,18 @@ Transform:
   - {fileID: 1136381411}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1539968460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539968457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1190a5c829be340ab05d20b5269dca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1564969412
 PrefabInstance:
   m_ObjectHideFlags: 0
