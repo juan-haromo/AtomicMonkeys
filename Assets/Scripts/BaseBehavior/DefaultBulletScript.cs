@@ -4,29 +4,30 @@ using UnityEngine;
 
 public class DefaultBulletScript : MonoBehaviour
 {
-    public float bulletDamage;
+    public int bulletDamage;
     public float bulletSpeed;
     public float bulletLifeTime;
-    public Vector2 direction;
-    private Rigidbody2D rb;
+    public Vector3 direction;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
         Invoke("destroyBullet", bulletLifeTime);
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + direction * Time.fixedDeltaTime * bulletSpeed);
+        rb.MovePosition(transform.position + direction * Time.fixedDeltaTime * bulletSpeed);
+
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<BaseHealth>().ChangeHealth(bulletDamage);
+            collision.gameObject.GetComponent<UnitMovement>().UpdateHealth(bulletDamage);
             DestroyBullet();
         }
     }
@@ -36,8 +37,8 @@ public class DefaultBulletScript : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void setDirection(Vector2 target)
+    public void setDirection(Vector3 target)
     {
-        direction = target - new Vector2(transform.position.x, transform.position.y);
+        direction = target - transform.position;
     }
 }

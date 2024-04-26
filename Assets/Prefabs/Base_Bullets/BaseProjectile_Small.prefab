@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8396424064739577554}
   - component: {fileID: 1976571165272650408}
   - component: {fileID: 3395966265118186605}
-  - component: {fileID: -4812119718400626566}
+  - component: {fileID: -5617838058996089492}
   m_Layer: 0
-  m_Name: BaseProjectile_Basic
+  m_Name: BaseProjectile_Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
---- !u!114 &-4812119718400626566
+--- !u!114 &-5617838058996089492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1013a6cf6684554499f993fa53fa0dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 2
-  bulletSpeed: 4
-  bulletLifeTime: 5
+  bulletDamage: 1
+  bulletSpeed: 8
+  bulletLifeTime: 3
   direction: {x: 0, y: 0}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class BaseAttack : MonoBehaviour
 {
     public float bulletRate;
-    private Vector2 target;
+    private Vector3 target;
     //public GameObject[] enemies;
     
 
