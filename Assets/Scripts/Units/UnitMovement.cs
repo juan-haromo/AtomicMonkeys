@@ -28,6 +28,7 @@ public class UnitMovement : MonoBehaviour
            
         if (!collidedEnemy)
         {
+            transicions.Walking();
             Movement();
             Debug.Log("collelere collele collele");
         }
