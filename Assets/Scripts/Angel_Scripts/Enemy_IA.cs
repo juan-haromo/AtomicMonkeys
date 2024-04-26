@@ -70,27 +70,25 @@ public class Enemy_IA : MonoBehaviour
         if (ammount > 2)
         {
             lineMoreAmount();
-           if(LineAmount > 2 )
+            if (LineAmount > 2)
             {
                 return 2;
             }
         }
         else
         {
-            if(true)
+            if (true)
             {
-
+                return 3;
             }
         }
-        int auxChoice = 0;
-        return auxChoice;
+        return 4;
     }
-
     #region actions
     // here will place the torret
     void PlaceTorret()
     {
-
+            
     }
     // here will place an unit
     void Placeunit(int line)
