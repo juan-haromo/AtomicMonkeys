@@ -27,11 +27,11 @@ public class DefaultBulletScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<BaseHealth>().ChangeHealth(bulletDamage);
-            destroyBullet();
+            DestroyBullet();
         }
     }
 
-    private void destroyBullet()
+    private void DestroyBullet()
     {
         Destroy(this.gameObject);
     }
