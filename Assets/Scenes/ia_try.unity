@@ -1013,7 +1013,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 29.85
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2793,7 +2793,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 30.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2958,6 +2958,7 @@ MonoBehaviour:
   money: 0
   moneyValue: 1
   upgradeCost: 5
+  upgradecount: 1
 --- !u!1001 &1075266597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3241,6 +3242,7 @@ MonoBehaviour:
   money: 0
   moneyValue: 1
   upgradeCost: 1
+  upgradeCount: 1
 --- !u!114 &1119496954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3977,7 +3979,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 29.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4445,10 +4447,10 @@ MonoBehaviour:
   ammount: 0
   choiceLine: 0
   LineAmount: 0
-  EIA: {fileID: 0}
-  tank: {fileID: 0}
-  melee: {fileID: 0}
-  range: {fileID: 0}
+  EIA: {fileID: 1049762841}
+  tank: {fileID: 2219356682327711852, guid: 08b613a228f00864ca56bd8e8be1f75f, type: 3}
+  melee: {fileID: 2039655841202502812, guid: c82297b300278614780cddc9312d406a, type: 3}
+  range: {fileID: 4222653827665608593, guid: 18990ddb296c22d41916dba658b7ad6b, type: 3}
 --- !u!4 &1539968459
 Transform:
   m_ObjectHideFlags: 0

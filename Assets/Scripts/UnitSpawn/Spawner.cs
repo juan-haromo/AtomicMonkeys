@@ -25,27 +25,25 @@ public class Spawner : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Q))
         {
             SpawnUnit(unitToSpawn, 0);
-            WaveManager.instance.enemies[0].AddEnemy(unitToSpawn.GetComponentInChildren<Stats>().Type); 
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
             SpawnUnit(unitToSpawn, 1);
-            WaveManager.instance.enemies[1].AddEnemy(unitToSpawn.GetComponentInChildren<Stats>().Type);
         }
         if (Input.GetKeyUp(KeyCode.E))
         {
-            SpawnUnit(unitToSpawn, 2);
-            WaveManager.instance.enemies[2].AddEnemy(unitToSpawn.GetComponentInChildren<Stats>().Type);
+           SpawnUnit(unitToSpawn, 2);
         }
         if (Input.GetKeyUp(KeyCode.R))
         {
             SpawnUnit(unitToSpawn, 3);
-            WaveManager.instance.enemies[3].AddEnemy(unitToSpawn.GetComponentInChildren<Stats>().Type);
+            
         }
         if (Input.GetKeyUp(KeyCode.T))
         {
             SpawnUnit(unitToSpawn, 4);
-            WaveManager.instance.enemies[4].AddEnemy(unitToSpawn.GetComponentInChildren<Stats>().Type);
+            
+            
         }
     }
 
