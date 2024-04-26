@@ -123,7 +123,7 @@ public class UnitMovement : MonoBehaviour
         Debug.Log("Se pelo");
     }
 
-    void UpdateHealth(int damageTaken)
+    public void UpdateHealth(int damageTaken)
     {
         health -= damageTaken;
     }
