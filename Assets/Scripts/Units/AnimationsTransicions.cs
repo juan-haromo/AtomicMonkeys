@@ -12,7 +12,7 @@ public class AnimationsTransicions : MonoBehaviour
     {
         GetComponent<Animator>();
     }
-
+    /*
     // Update is called once per frame
     void Update()
     {
@@ -37,7 +37,7 @@ public class AnimationsTransicions : MonoBehaviour
             Hurting();
         }
     }
-
+    */
     public void Idling()
     {
         animator.SetBool("IsIdle", true);
