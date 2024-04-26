@@ -44,6 +44,11 @@ public class BarGame : MonoBehaviour
     bool isCooldown7 = false;
     public KeyCode unit7;
 
+    [Header("Enemies")]
+    public GameObject enemie1;
+    public GameObject enemie2; 
+    public GameObject enemie3;
+
 
 
     private void Start()
@@ -73,7 +78,7 @@ public class BarGame : MonoBehaviour
         {
             isCooldown = true;
             unitl1.fillAmount = 1;
-
+            Spawner.instance.ChangeUnitToSpawn(enemie1);
         }
 
         if(isCooldown)
@@ -86,6 +91,8 @@ public class BarGame : MonoBehaviour
                 isCooldown = false;
             }
         }
+
+
     }
 
     void Unitspawn2()
@@ -94,7 +101,7 @@ public class BarGame : MonoBehaviour
         {
             isCooldown2 = true;
             unitl2.fillAmount = 1;
-
+            Spawner.instance.ChangeUnitToSpawn(enemie2);
         }
 
         if (isCooldown2)
@@ -115,6 +122,7 @@ public class BarGame : MonoBehaviour
         {
             isCooldown3 = true;
             unitl3.fillAmount = 1;
+            Spawner.instance.ChangeUnitToSpawn(enemie3);
 
         }
 
@@ -181,12 +189,13 @@ public class BarGame : MonoBehaviour
         }
     }
 
-    void Unitspawn5()
+    void Unitspawn5() // Upgrade Base
     {
         if (Input.GetKey(unit7) && isCooldown7 == false)
         {
             isCooldown7 = true;
             unitl7.fillAmount = 1;
+            // Economy.instance.MoneyUpgrade();
 
         }
 
