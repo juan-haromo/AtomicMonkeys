@@ -8,6 +8,7 @@ public class Economy_IA : MonoBehaviour
     public float moneyValue = 1;
     public static Economy_IA instance;
     public float upgradeCost = 5;
+    public float upgradecount = 1;
 
     private void Awake()
     {
@@ -23,11 +24,12 @@ public class Economy_IA : MonoBehaviour
 
    public void MoneyUpgrade()
     {
-        if (money > upgradeCost)
+        if (money > upgradeCost && upgradecount <= 5)
         {
-            Economy_IA.instance.moneyValue += (moneyValue * 2);
             Economy_IA.instance.money -= upgradeCost;
-            Economy_IA.instance.upgradeCost = upgradeCost * 2;
+            Economy_IA.instance.moneyValue += (moneyValue * 0.25f);
+            Economy_IA.instance.upgradeCost = upgradeCost * 4;
+            upgradecount++;
         }
     }
 
