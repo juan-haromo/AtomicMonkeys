@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 1684952584381930148}
   m_Layer: 0
   m_Name: Enemy UnitPH
-  m_TagString: Ally
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
