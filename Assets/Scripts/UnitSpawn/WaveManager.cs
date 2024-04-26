@@ -11,9 +11,10 @@ public class WaveManager : MonoBehaviour
 
     public class Enemies
     {
-        int meleeAmount = 0;
-        int tankAmount = 0;
-        int rangeAmount = 0;
+        public int meleeAmount = 0;
+        public int tankAmount = 0;
+        public int rangeAmount = 0;
+        public int totalAmount = 0;
 
 
         public void AddEnemy(int type)
@@ -22,12 +23,15 @@ public class WaveManager : MonoBehaviour
             {
                 case 0:
                     meleeAmount++;
+                    totalAmount++;
                     break;
                 case 1:
-                    tankAmount++; 
+                    tankAmount++;
+                    totalAmount++;
                     break;
                 case 2:
                     rangeAmount++;
+                    totalAmount++;
                     break;
                 default:
                     break;
@@ -40,12 +44,15 @@ public class WaveManager : MonoBehaviour
             {
                 case 0:
                     meleeAmount--;
+                    totalAmount--;
                     break;
                 case 1:
                     tankAmount--;
+                    totalAmount--;
                     break;
                 case 2:
                     rangeAmount--;
+                    totalAmount--;
                     break;
                 default:
                     break;
