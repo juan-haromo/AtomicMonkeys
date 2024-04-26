@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Economy : MonoBehaviour
 {
-    public TextMeshPro moneyDisplay;
+    public TextMeshProUGUI moneyDisplay;
     public float money=0;
     public float moneyValue=1;
     public static Economy instance;
@@ -37,25 +37,22 @@ public class Economy : MonoBehaviour
 
     }
 
-    bool Buy(int cost)
+    public bool Buy(int cost)
     {
 
         if (money > cost)
         { Economy.instance.money -= cost;
             return true;
         }
-        else
-        { //add player feedback
-            StartCoroutine(CantBuy());
-        }
+        StartCoroutine(CantBuy());
         return false;
     
     }
     private IEnumerator CantBuy()
-    { Economy.instance.moneyDisplay.color = Color.red;
-        new WaitForSeconds(1f);
-        Economy.instance.moneyDisplay.color = Color.white;
-        yield return null;
+    {
+        instance.moneyDisplay.color = Color.red;
+        yield return new WaitForSeconds(1.5f);
+        instance.moneyDisplay.color = Color.white;
     }
 
 }

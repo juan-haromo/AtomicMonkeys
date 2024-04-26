@@ -49,4 +49,6 @@ public class Stats : MonoBehaviour
             isdeath = true;
         }
     }
+
+    public int Cost { get { return price; } }
 }

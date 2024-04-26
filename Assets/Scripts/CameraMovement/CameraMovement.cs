@@ -6,6 +6,7 @@ public class CameraMovement : MonoBehaviour
 {
     public Transform target;
     public float smoothing;
+    public float moveSpeed = 50f;
     [SerializeField]public Vector2 maxPosition;
     [SerializeField]public Vector2 minPosition;
 
@@ -16,7 +17,7 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
         
-            Vector3 position=new Vector3(0,0,0);
+        Vector3 position=new Vector3(0,0,0);
 
             
         int edgescrollsize = 20;
@@ -25,16 +26,13 @@ public class CameraMovement : MonoBehaviour
         {
             position.x = +1f;
         }
-
         if (Input.mousePosition.x <  edgescrollsize && target.position.x > minPosition.x || Input.GetKey(KeyCode.A) && target.position.x > minPosition.x)
         {
             position.x = -1f;
         }
-        if (Input.mousePosition.x < Screen.width-edgescrollsize && Input.mousePosition.x > edgescrollsize)
-        {  position.x = 0f;}
-            Vector3 movedir=transform.forward*position.z+transform.right*position.x;
+        
+        Vector3 movedir=transform.forward*position.z+transform.right*position.x;
 
-        float moveSpeed = 50f;
         transform.position += movedir * moveSpeed * Time.deltaTime;
     }
 }
