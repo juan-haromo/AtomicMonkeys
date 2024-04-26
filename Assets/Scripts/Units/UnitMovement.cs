@@ -1,17 +1,31 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class UnitMovement : MonoBehaviour
 {
     public float targetPosition;
-    public float movementSpeed;
     private bool collidedEnemy = false;
+    private bool isDead = false;
+    private float movement;
+    public GameObject stats;
+    //stats
+    private void Awake()
+    {
+        movement = GetComponentInChildren<Stats>().MovementSpeed();
+        //Debug.Log(movement);
+    }
+    //Velocidad de ataque 
 
     void Update()
     {
-        Movement();
+           
+        if (!isDead)
+        {
+            Movement();
+        }
     }
 
-
+    #region movement
     private void Movement()
     {
         //We determine if the enemy is colliding or not, if its colliding it wont move
@@ -20,12 +34,12 @@ public class UnitMovement : MonoBehaviour
             //We look at which direction the unity should move
             if (transform.position.x < targetPosition)
             {
-                float newPosition = transform.position.x + (movementSpeed * Time.deltaTime);
+                float newPosition = transform.position.x + (movement * Time.deltaTime);
                 transform.position = new Vector3(newPosition, transform.position.y, transform.position.z);
             }
             else if (transform.position.x > targetPosition)
             {
-                float newPosition = transform.position.x - (movementSpeed * Time.deltaTime);
+                float newPosition = transform.position.x - (movement * Time.deltaTime);
                 transform.position = new Vector3(newPosition, transform.position.y, transform.position.z);
             }
         }
@@ -37,13 +51,28 @@ public class UnitMovement : MonoBehaviour
     {
             collidedEnemy = true;
             Debug.Log("chocaron");
+            //Health(other.gameObject.GetComponent<UnitMovement>().damage);
     }
 
-    private void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
         collidedEnemy = false;
         Debug.Log("Se pelo");
-    
     }
+    #endregion
 
+    /*
+    private void Health(int damageTaken)
+    {
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            health -= damageTaken;
+            if (health <= 0)
+            {
+                Debug.Log("murio la unidad");
+                Destroy(gameObject);
+            }
+        }
+    }
+    */
 }
