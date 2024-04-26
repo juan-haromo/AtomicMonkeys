@@ -10,6 +10,7 @@ public class UnitMovement : MonoBehaviour
     public int damageTaken = 0;
     public int health;
     public GameObject stats;
+    public string tagToAttack;
 
     public float attackSpeed;
     public float indextime = 0;
@@ -66,6 +67,7 @@ public class UnitMovement : MonoBehaviour
     #region movement
     private void Movement()
     {
+
         //We determine if the enemy is colliding or not, if its colliding it wont move
         if(!collidedEnemy){
 
@@ -82,6 +84,12 @@ public class UnitMovement : MonoBehaviour
                 //We flip the enmy so it faces the correct direction
                 transform.localRotation = Quaternion.Euler(0, 180, 0);
             }
+            else //(transform.position.x == targetPosition - 0.5f)
+            {
+                Debug.Log("ya llego");
+                movement = 0;
+                transform.position = new Vector3(targetPosition, transform.position.y, transform.position.z);
+            }
         }
     }
     #endregion
@@ -90,19 +98,28 @@ public class UnitMovement : MonoBehaviour
     //If they have the same tag they should ignore each other
     void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag(tagToAttack))
+        {
         collidedEnemy = true;
         Debug.Log("chocaron");
-        //Health(other.gameObject.GetComponent<UnitMovement>().damage);
+            //Health(other.gameObject.GetComponent<UnitMovement>().damage);
 
-        //We acces the damage that the other unit deals
-        //damageTaken = other.gameObject.GetComponent<Stats>().Damage();
-        damageTaken = other.GetComponentInChildren<Stats>().Damage();
-        Debug.Log(damageTaken);    
+            //We acces the damage that the other unit deals
+            //damageTaken = other.gameObject.GetComponent<Stats>().Damage();
+            damageTaken = other.GetComponentInChildren<Stats>().Damage();
+        Debug.Log(damageTaken); 
+        }
+        else 
+        {
+            movement = 0;
+        }
+           
     }
 
     void OnTriggerExit(Collider other)
     {
         collidedEnemy = false;
+        movement = GetComponentInChildren<Stats>().MovementSpeed();
         Debug.Log("Se pelo");
     }
 
