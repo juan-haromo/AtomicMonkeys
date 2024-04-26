@@ -6,6 +6,7 @@ using UnityEngine;
 public class Base_shoot : MonoBehaviour
 {
     [SerializeField] GameObject disparo;
+    [SerializeField] GameObject target;
     [SerializeField] private bool canShoot = false;
     [SerializeField] private float indexTime;
     [SerializeField] private int attackSpeed;
@@ -28,7 +29,8 @@ public class Base_shoot : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("alguien entro al rango de la torreta");
+            Debug.Log("alguien esta en el rango de la torreta");
+            target = other.gameObject;
             canShoot = true;
         }
     }
@@ -43,10 +45,10 @@ public class Base_shoot : MonoBehaviour
 
     private void shoot()
     {
-        Debug.Log("la basa fue disparada");
-        GameObject shoot = Instantiate(disparo,transform);
+        Debug.Log("la bala fue disparada");
+        GameObject shoot = Instantiate(disparo,transform.position,transform.rotation);
         shoot.GetComponent<DefaultBulletScript>().bulletDamage = torretDamage;
         Rigidbody rb = shoot.GetComponent<Rigidbody>();
-        rb.AddForce(Vector3.forward * shoot.GetComponent<DefaultBulletScript>().bulletSpeed);
+        rb.AddForce((target.transform.position-transform.position) * shoot.GetComponent<DefaultBulletScript>().bulletSpeed);
     }
 }
