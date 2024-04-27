@@ -11,6 +11,7 @@ public class UnitMovement : MonoBehaviour
     public int health;
     public GameObject stats;
     public string tagToAttack;
+    public UnitMovement enemy = null;
 
     public float attackSpeed;
     public float indextime = 0;
@@ -39,7 +40,8 @@ public class UnitMovement : MonoBehaviour
 
             if (indextime > attackSpeed)
             {
-            UpdateHealth(damageTaken);
+            //UpdateHealth(damageTaken);
+            DealDamage();
             //Debug.Log(health);
             indextime = 0;
             }
@@ -50,8 +52,8 @@ public class UnitMovement : MonoBehaviour
                 health = 0;
                 transicions.Hurting();
                 transicions.Dying();
+                Destroy(gameObject, 5);
                 return;
-                //Destroy(gameObject, 5);
             }
         }
     }
@@ -108,9 +110,15 @@ public class UnitMovement : MonoBehaviour
 
             //We acces the damage that the other unit deals
             //damageTaken = other.gameObject.GetComponent<Stats>().Damage();
-            damageTaken = other.GetComponentInChildren<Stats>().Damage();
-        Debug.Log(damageTaken); 
-        }           
+
+            if(enemy == null)
+            {
+                enemy = other.GetComponent<UnitMovement>();
+            }
+            enemy.DealDamage();
+        Debug.Log(damageTaken);
+            
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -118,10 +126,24 @@ public class UnitMovement : MonoBehaviour
         collidedEnemy = false;
         movement = GetComponentInChildren<Stats>().MovementSpeed();
         Debug.Log("Se pelo");
+        enemy = null;
     }
 
     public void UpdateHealth(int damageTaken)
     {
         health -= damageTaken;
+    }
+
+    public void DealDamage()
+    {
+        if (enemy != null)
+        {
+            enemy.health -= stats.GetComponentInChildren<Stats>().Damage();
+        }
+        else 
+        {
+            collidedEnemy = false;
+            Movement();
+        }
     }
 }
