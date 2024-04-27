@@ -17,6 +17,8 @@ public class Enemy_IA : MonoBehaviour
     [SerializeField] private GameObject range;
     [SerializeField] private float indextime;
     [SerializeField] private float actionspeed;
+    [SerializeField] private List<List<GameObject>> nodos;
+
     //Acceso al wave manager
     //WaveManager.instance
     // economy.instance.moneyS
@@ -70,17 +72,36 @@ public class Enemy_IA : MonoBehaviour
             }
         }
     }
+    int totalLinesAmount()
+    {
+        int totallines = 0;
+        for (int i = 0; i < totalLines; i++)
+        {
+            if (WaveManager.instance.enemies[i].totalAmount > 0)
+            {
+                totallines++;
+            }
+        }
+        return totalLines;
+    }
     // here will choice whats gonna do
     int Choice()
     {
         ammount = totalAmount();
-        if (ammount > 2)
+        print(ammount + " ammounts");
+        if (ammount > 1)
         {
             lineMoreAmount();
             if (LineAmount > 2)
             {
                 return 2;
             }
+        }
+        else if(totalLinesAmount() >= 3)
+        {
+            print(totalLinesAmount());
+            Debug.Log("total lines amount " + totalAmount());
+            defaultSpawn();
         }
         else
         {
@@ -166,6 +187,7 @@ public class Enemy_IA : MonoBehaviour
         Debug.Log("Economy");
         if(Economy_IA.instance.upgradecount < 5)
         {
+            Debug.Log("Upgrade time");
             Economy_IA.instance.MoneyUpgrade();
         }
         else
@@ -181,24 +203,36 @@ public class Enemy_IA : MonoBehaviour
         auxRandomLine = Random.Range(0, 5);
         switch(auxRandomUnit)
         {
+            // tanks
             case 1:
-                Debug.Log("Tank" + auxRandomUnit);
-                Spawners_IA.instance.ChangeUnitToSpawn(tank);
-                Spawners_IA.instance.IA_Spawns(auxRandomLine);
+                if (tank.GetComponentInChildren<Stats>().Cost < Economy_IA.instance.money)
+                {
+                    Spawners_IA.instance.ChangeUnitToSpawn(tank);
+                    Spawners_IA.instance.IA_Spawns(auxRandomLine);
+                }
                 break;
+            // melee
             case 2:
-                Debug.Log("Melee" + auxRandomUnit);
-                Spawners_IA.instance.ChangeUnitToSpawn(melee);
-                Spawners_IA.instance.IA_Spawns(auxRandomLine);
+                if (melee.GetComponentInChildren<Stats>().Cost < Economy_IA.instance.money)
+                {
+                    Spawners_IA.instance.ChangeUnitToSpawn(melee);
+                    Spawners_IA.instance.IA_Spawns(auxRandomLine);
+                }
                 break;
+            // range
             case 3:
-                Debug.Log("Range" + auxRandomUnit);
-                Spawners_IA.instance.ChangeUnitToSpawn(range);
-                Spawners_IA.instance.IA_Spawns(auxRandomLine);
+                if (range.GetComponentInChildren<Stats>().Cost < Economy_IA.instance.money)
+                {
+                    Spawners_IA.instance.ChangeUnitToSpawn(range);
+                    Spawners_IA.instance.IA_Spawns(auxRandomLine);
+                }
                 break;
             default:
-                Spawners_IA.instance.ChangeUnitToSpawn(melee);
-                Spawners_IA.instance.IA_Spawns(auxRandomLine);
+                if (melee.GetComponentInChildren<Stats>().Cost < Economy_IA.instance.money)
+                {
+                    Spawners_IA.instance.ChangeUnitToSpawn(melee);
+                    Spawners_IA.instance.IA_Spawns(auxRandomLine);
+                }
                 break;
         }
     }

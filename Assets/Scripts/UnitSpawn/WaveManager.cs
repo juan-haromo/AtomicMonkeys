@@ -19,7 +19,6 @@ public class WaveManager : MonoBehaviour
 
         public void AddEnemy(int type)
         {
-            print(type);
             switch (type)
             {
                 case 0:
@@ -36,7 +35,6 @@ public class WaveManager : MonoBehaviour
                     break;
                 default:
                     break;
-
             }
         }
         public void RemoveEnemy(int type)
@@ -74,6 +72,7 @@ public class WaveManager : MonoBehaviour
             {
                 enemies.Add(new Enemies());
             }
+            print(enemies);
         }
         else
         {
