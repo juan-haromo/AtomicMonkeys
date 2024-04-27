@@ -1,0 +1,415 @@
+fileFormatVersion: 2
+guid: 18ced7094f2cde845a59429386c88fca
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nachito_torret_death_0
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 83
+        width: 116
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716a6448686717b458baa8f5a16e3db9
+      internalID: -1501379898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nachito_torret_death_2
+      rect:
+        serializedVersion: 2
+        x: 2035
+        y: 75
+        width: 127
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c78f46998d6e04d81b27b6defca946
+      internalID: 1738616472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nachito_torret_death_8
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 71
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3eb4353561ef8c4da6452b2bd338c3f
+      internalID: -924110168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nachito_torret_death_9
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 71
+        width: 118
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c9142024cc21841ab5feb32ed0e8bd
+      internalID: -1148947927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nachito_torret_death_10
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 71
+        width: 117
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2f10f407fb2cf42b920cb1f1d8915d
+      internalID: 1114634583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nachito_torret_death_11
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 71
+        width: 116
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9d293e5846ea54398e195cdd779cd4
+      internalID: 1567160481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nachito_torret_death_12
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 71
+        width: 140
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb962500a5d25f341bd8455b574f0fdb
+      internalID: 1791297381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nachito_torret_death_13
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 71
+        width: 139
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d20cae73cd90dc488843ad1ec3ceccd
+      internalID: -1227229193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nachito_torret_death_28
+      rect:
+        serializedVersion: 2
+        x: 2318
+        y: 79
+        width: 122
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c9dca7427289e44aeb67f55c665c07
+      internalID: 1205053623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nachito_torret_death_32
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 91
+        width: 120
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93661d3acbf50b243b84d8d76d62d193
+      internalID: 1533143656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nachito_torret_death_33
+      rect:
+        serializedVersion: 2
+        x: 2915
+        y: 96
+        width: 54
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6f81229bd2c604ea5d2572edacde97
+      internalID: 572401525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nachito_torret_death_34
+      rect:
+        serializedVersion: 2
+        x: 3194
+        y: 96
+        width: 54
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc129d2c8fb8c34a9c3f4f42ad56f8d
+      internalID: 1049310916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b5924b00cfbf50b48a51a77a26ca65b8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Nachito_torret_death_0: -1501379898
+      Nachito_torret_death_1: -1989179456
+      Nachito_torret_death_10: 1114634583
+      Nachito_torret_death_11: 1567160481
+      Nachito_torret_death_12: 1791297381
+      Nachito_torret_death_13: -1227229193
+      Nachito_torret_death_14: 1494280800
+      Nachito_torret_death_15: -571494821
+      Nachito_torret_death_16: 2013233683
+      Nachito_torret_death_17: -302677389
+      Nachito_torret_death_18: -1630683240
+      Nachito_torret_death_19: -1895044153
+      Nachito_torret_death_2: 1738616472
+      Nachito_torret_death_20: -2123300940
+      Nachito_torret_death_21: 1244287821
+      Nachito_torret_death_22: 2090390413
+      Nachito_torret_death_23: 1811671310
+      Nachito_torret_death_24: -2041214406
+      Nachito_torret_death_25: 1222631164
+      Nachito_torret_death_26: 1327133392
+      Nachito_torret_death_27: 882726790
+      Nachito_torret_death_28: 1205053623
+      Nachito_torret_death_29: -880106643
+      Nachito_torret_death_3: 1686308847
+      Nachito_torret_death_30: 1761930219
+      Nachito_torret_death_31: 345786154
+      Nachito_torret_death_32: 1533143656
+      Nachito_torret_death_33: 572401525
+      Nachito_torret_death_34: 1049310916
+      Nachito_torret_death_35: 1050880800
+      Nachito_torret_death_4: -268980318
+      Nachito_torret_death_5: 1155633342
+      Nachito_torret_death_6: -1683243574
+      Nachito_torret_death_7: 661542587
+      Nachito_torret_death_8: -924110168
+      Nachito_torret_death_9: -1148947927
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
