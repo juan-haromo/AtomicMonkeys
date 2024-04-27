@@ -1,5 +1,3 @@
-using JetBrains.Annotations;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class UnitMovement : MonoBehaviour
@@ -26,7 +24,7 @@ public class UnitMovement : MonoBehaviour
 
     void Update()
     {
-           
+
         if (!collidedEnemy)
         {
             transicions.Walking();
@@ -40,10 +38,10 @@ public class UnitMovement : MonoBehaviour
 
             if (indextime > attackSpeed)
             {
-            //UpdateHealth(damageTaken);
-            DealDamage();
-            //Debug.Log(health);
-            indextime = 0;
+                //UpdateHealth(damageTaken);
+                DealDamage();
+                //Debug.Log(health);
+                indextime = 0;
             }
             indextime += Time.deltaTime;
 
@@ -72,7 +70,8 @@ public class UnitMovement : MonoBehaviour
     {
 
         //We determine if the enemy is colliding or not, if its colliding it wont move
-        if(!collidedEnemy){
+        if (!collidedEnemy)
+        {
 
             //We look at which direction the unity should move
             if (transform.position.x < targetPosition)
@@ -103,22 +102,22 @@ public class UnitMovement : MonoBehaviour
     {
         if (other.CompareTag(tagToAttack))
         {
-        collidedEnemy = true;
-        movement = 0;
-        Debug.Log("chocaron");
+            collidedEnemy = true;
+            Debug.Log("chocaron");
             //Health(other.gameObject.GetComponent<UnitMovement>().damage);
 
             //We acces the damage that the other unit deals
             //damageTaken = other.gameObject.GetComponent<Stats>().Damage();
-
-            if(enemy == null)
+            if (enemy == null)
             {
                 enemy = other.GetComponent<UnitMovement>();
             }
             enemy.DealDamage();
-        Debug.Log(damageTaken);
-            
+            Debug.Log(damageTaken);
+
         }
+
+
     }
 
     void OnTriggerExit(Collider other)
@@ -140,7 +139,7 @@ public class UnitMovement : MonoBehaviour
         {
             enemy.health -= stats.GetComponentInChildren<Stats>().Damage();
         }
-        else 
+        else
         {
             collidedEnemy = false;
             Movement();
