@@ -300,6 +300,7 @@ MonoBehaviour:
   health: 0
   stats: {fileID: 1892185416105241072}
   tagToAttack: Ally
+  enemy: {fileID: 0}
   attackSpeed: 0
   indextime: 0
 --- !u!65 &7809251976114316999
