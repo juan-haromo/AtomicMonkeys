@@ -30,6 +30,7 @@ public class BarGame : MonoBehaviour
     bool isCooldown4 = false;
     public KeyCode unit4;
     public GameObject ButtonBase;
+    public BaseAttack baseAttack;
 
     [Header("Defense/Attack")]
     public Image Attack;
@@ -150,7 +151,7 @@ public class BarGame : MonoBehaviour
             isCooldown4 = true;
             unitl4.fillAmount = 1;
             ButtonBase.SetActive(false);
-
+            baseAttack.SwitchWeapon();
         }
 
         CooldownBase();
@@ -296,7 +297,7 @@ public class BarGame : MonoBehaviour
     {
         isCooldown4 = true;
         unitl4.fillAmount = 1;
-
+        baseAttack.SwitchWeapon();
         CooldownBase();
     }
 

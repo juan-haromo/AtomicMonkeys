@@ -7,11 +7,28 @@ public class DetectionRangeScript : MonoBehaviour
     public List<Transform> enemiesInRange;
     public string targetTag;
     public BaseAttack baseAttack;
+    private bool hasEnemiesNear;
 
     // Start is called before the first frame update
     void Start()
     {
         enemiesInRange = new List<Transform>();
+    }
+
+    private void Update()
+    {
+        if (hasEnemiesNear)
+        {
+            if(enemiesInRange[0] == null)
+            {
+                enemiesInRange.Remove(enemiesInRange[0]);
+                if (enemiesInRange.Count == 0)
+                {
+                    baseAttack.StopShooting();
+                    hasEnemiesNear = false;
+                }
+            }
+        }
     }
 
     public int getEnemyCount()
@@ -39,6 +56,7 @@ public class DetectionRangeScript : MonoBehaviour
             {
                 enemiesInRange.Add(other.gameObject.transform);
                 baseAttack.StartShooting();
+                hasEnemiesNear = true;
             }
             else
             {
@@ -55,6 +73,7 @@ public class DetectionRangeScript : MonoBehaviour
             if (enemiesInRange.Count == 0)
             {
                 baseAttack.StopShooting();
+                hasEnemiesNear = false;
             }
         }
     }
