@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseHealthUpdate : UnitMovement
@@ -14,6 +15,9 @@ public class BaseHealthUpdate : UnitMovement
     //public float attackSpeed;
     //public float indextime = 0;
     //AnimationsTransicions transicions;
+
+    [SerializeField] GameObject resultScreen;
+    [SerializeField] List<GameObject> off;
     private void Awake()
     {
         movement = GetComponentInChildren<Stats>().MovementSpeed();
@@ -24,6 +28,7 @@ public class BaseHealthUpdate : UnitMovement
 
     void Update()
     {
+  
 
         if (!collidedEnemy)
         {
@@ -146,5 +151,15 @@ public class BaseHealthUpdate : UnitMovement
             collidedEnemy = false;
             Movement();
         }
+    }
+
+    private void OnDestroy()
+    { 
+        for(int i  = 0; i<off.Count; i++)
+        {
+            off[i].SetActive(false);
+        }
+        Time.timeScale= 0f;
+        resultScreen.SetActive(true);
     }
 }
