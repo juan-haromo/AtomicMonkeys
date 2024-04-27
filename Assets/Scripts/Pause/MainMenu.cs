@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject options;
     public GameObject tutorial;
+    public GameObject credits;
 
     public void Play()
     {
@@ -35,5 +36,14 @@ public class MainMenu : MonoBehaviour
     public void CloseTutorial()
     {
         tutorial.SetActive(false);
+    }
+
+    public void OpenCredits()
+    {
+        credits.SetActive(true);
+    }
+    public void CloseCredits()
+    {
+        credits.SetActive(false);
     }
 }
