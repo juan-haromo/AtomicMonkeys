@@ -874,7 +874,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1871283227}
         m_TargetAssemblyTypeName: BarGame, Assembly-CSharp
-        m_MethodName: ButtonUnit3
+        m_MethodName: ButtonUpdate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3883,7 +3883,10 @@ MonoBehaviour:
   unitl7: {fileID: 2114369199}
   cooldown7: 5
   unit7: 101
-  ButtonUpdateBase: {fileID: 0}
+  ButtonUpdateBase: {fileID: 462355177}
+  enemie1: {fileID: 0}
+  enemie2: {fileID: 0}
+  enemie3: {fileID: 0}
 --- !u!1 &1879533790
 GameObject:
   m_ObjectHideFlags: 0

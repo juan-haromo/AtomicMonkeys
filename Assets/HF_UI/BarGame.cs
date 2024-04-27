@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Android.Gradle.Manifest;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -52,6 +48,11 @@ public class BarGame : MonoBehaviour
     public KeyCode unit7;
     public GameObject ButtonUpdateBase;
 
+    [Header("Enemies")]
+    public GameObject enemie1;
+    public GameObject enemie2;
+    public GameObject enemie3;
+
     private void Start()
     {
         unitl1.fillAmount = 0;
@@ -80,6 +81,7 @@ public class BarGame : MonoBehaviour
             isCooldown = true;
             unitl1.fillAmount = 1;
             Buttonu1.SetActive(false);
+            Spawner.instance.ChangeUnitToSpawn(enemie1);
         }
 
         CooldownUni1();
@@ -90,6 +92,7 @@ public class BarGame : MonoBehaviour
         isCooldown = true;
         unitl1.fillAmount = 1;
         Buttonu1.SetActive(false);
+        Spawner.instance.ChangeUnitToSpawn(enemie1);
 
         CooldownUni1();
     }
@@ -101,7 +104,7 @@ public class BarGame : MonoBehaviour
             isCooldown2 = true;
             unitl2.fillAmount = 1;
             Buttonu2.SetActive(false);
-
+            Spawner.instance.ChangeUnitToSpawn(enemie2);
         }
         
         CooldownUni2();
@@ -112,6 +115,7 @@ public class BarGame : MonoBehaviour
         isCooldown2 = true;
         unitl2.fillAmount = 1;
         Buttonu2.SetActive(false);
+        Spawner.instance.ChangeUnitToSpawn(enemie2);
 
         CooldownUni2();
     }
@@ -123,6 +127,7 @@ public class BarGame : MonoBehaviour
             isCooldown3 = true;
             unitl3.fillAmount = 1;
             Buttonu3.SetActive(false);
+            Spawner.instance.ChangeUnitToSpawn(enemie3);
         }
 
         CooldownUni3();
@@ -133,6 +138,7 @@ public class BarGame : MonoBehaviour
         isCooldown3 = true;
         unitl3.fillAmount = 1;
         Buttonu3.SetActive(false);
+        Spawner.instance.ChangeUnitToSpawn(enemie3);
 
         CooldownUni3();
     }
