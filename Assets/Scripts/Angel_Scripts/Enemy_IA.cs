@@ -29,6 +29,7 @@ public class Enemy_IA : MonoBehaviour
             {
                 case 1:
                     PlaceTorret();
+                    defaultSpawn();
                     break;
                 case 2:
                     Placeunit(choiceLine);

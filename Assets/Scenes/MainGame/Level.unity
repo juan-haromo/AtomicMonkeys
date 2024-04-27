@@ -4168,6 +4168,10 @@ PrefabInstance:
       value: Base
       objectReference: {fileID: 0}
     - target: {fileID: 3527082632495506359, guid: 79b67b5de4a326242b7ce864f634d32c, type: 3}
+      propertyPath: moneyValue
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527082632495506359, guid: 79b67b5de4a326242b7ce864f634d32c, type: 3}
       propertyPath: upgradeCost
       value: 5
       objectReference: {fileID: 0}
@@ -4468,7 +4472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 50
-  moneyValue: 1
+  moneyValue: 1.5
   upgradeCost: 5
   upgradecount: 1
 --- !u!1001 &1060752269
