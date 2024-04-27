@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3217835558134577369}
   m_Layer: 0
   m_Name: Turret_en
-  m_TagString: Ally
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,8 +108,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.5, y: 2.0095892, z: 1.5}
+  m_Center: {x: 0, y: 0.5047943, z: 0}
 --- !u!114 &7926074581646342657
 MonoBehaviour:
   m_ObjectHideFlags: 0

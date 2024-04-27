@@ -38,9 +38,9 @@ public class DefaultBulletScript : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void setDirection(Vector3 target)
+    public void setDirection(Vector3 target, Vector3 start)
     {
-        direction = target - transform.position;
+        direction = target - start;
     }
 
     public void setTag(string tag)

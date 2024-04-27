@@ -66,17 +66,20 @@ public class BarGame : MonoBehaviour
 
     private void Update()
     {
+        
         Unitspawn();
         Unitspawn2();
         Unitspawn3();
         Unitspawn4();
         TowerSwap();
         Unitspawn5();
+        
 
     }
-
+    
     void Unitspawn() // First unit
     {
+        /*
         if(Input.GetKey(unit1) && isCooldown == false) 
         {
             isCooldown = true;
@@ -84,9 +87,10 @@ public class BarGame : MonoBehaviour
             Buttonu1.SetActive(false);
             Spawner.instance.ChangeUnitToSpawn(enemie1);
         }
-
+        */
         CooldownUni1();
     }
+    
 
     public void ButtonUnit1()
     {
@@ -98,8 +102,10 @@ public class BarGame : MonoBehaviour
         CooldownUni1();
     }
 
+    
     void Unitspawn2() // Second unit
     {
+        /*
         if (Input.GetKey(unit2) && isCooldown2 == false)
         {
             isCooldown2 = true;
@@ -107,9 +113,10 @@ public class BarGame : MonoBehaviour
             Buttonu2.SetActive(false);
             Spawner.instance.ChangeUnitToSpawn(enemie2);
         }
-        
+        */
         CooldownUni2();
     }
+    
 
     public void ButtonUnit2()
     {
@@ -120,9 +127,10 @@ public class BarGame : MonoBehaviour
 
         CooldownUni2();
     }
-
+   
     void Unitspawn3() // third unit
     {
+        /*
         if (Input.GetKey(unit3) && isCooldown3 == false)
         {
             isCooldown3 = true;
@@ -130,7 +138,7 @@ public class BarGame : MonoBehaviour
             Buttonu3.SetActive(false);
             Spawner.instance.ChangeUnitToSpawn(enemie3);
         }
-
+        */
         CooldownUni3();
     }
 
@@ -143,9 +151,10 @@ public class BarGame : MonoBehaviour
 
         CooldownUni3();
     }
-
+    
     void Unitspawn4() // Base
     {
+        /*
         if (Input.GetKey(unit4) && isCooldown4 == false)
         {
             isCooldown4 = true;
@@ -153,14 +162,15 @@ public class BarGame : MonoBehaviour
             ButtonBase.SetActive(false);
             baseAttack.SwitchWeapon();
         }
-
+        */
         CooldownBase();
 
     }
-
+    
+    
     void TowerSwap()
     {
-
+        /*
         if (Input.GetKey(unit5) && isCooldown5 == false || Input.GetKey(unit6) && isCooldown5 == false)
         {
             isCooldown5 = true;
@@ -169,18 +179,20 @@ public class BarGame : MonoBehaviour
 
             ObjectOff();
         }
-
+        */
         CooldownAD();
     }
-
+    
     public void ObjectOff()
     {
         ButtonA.SetActive(false);
         ButtonD.SetActive(false);
     }
 
+    
     public void Unitspawn5()
     {
+        /*
         if (Input.GetKey(unit7) && isCooldown7 == false)
         {
             isCooldown7 = true;
@@ -188,9 +200,11 @@ public class BarGame : MonoBehaviour
             ButtonUpdateBase.SetActive(false);
 
         }
+        */
 
         CooldownbaseUpdate();
     }
+    
 
     public void ButtonUpdate()
     {
