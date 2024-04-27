@@ -47,13 +47,13 @@ public class Node : MonoBehaviour
     {
         if(defensePlaced == null)
         {
-            if(DefenseManager.instance.objecToBuild && Economy.instance.Buy(DefenseManager.instance.wall.GetComponent<Stats>().Price()*(y+1))) 
+            if(DefenseManager.instance.objecToBuild && Economy.instance.Buy(DefenseManager.instance.wall.GetComponentInChildren<Stats>().Price()*(y+1))) 
             { 
-                defensePlaced = (GameObject)Instantiate(DefenseManager.instance.wall,transform.position,transform.rotation); 
+                defensePlaced = (GameObject)Instantiate(DefenseManager_IA.instance.wall,transform.position,transform.rotation); 
             }
-            else if(Economy.instance.Buy(DefenseManager.instance.wall.GetComponent<Stats>().Price()*(y+1)))
+            else if(Economy.instance.Buy(DefenseManager_IA.instance.wall.GetComponentInChildren<Stats>().Price()*(y+1)))
             {
-                defensePlaced = (GameObject)Instantiate(DefenseManager.instance.turret, transform.position, transform.rotation);
+                defensePlaced = (GameObject)Instantiate(DefenseManager_IA.instance.turret, transform.position, transform.rotation);
             }
             else
             {

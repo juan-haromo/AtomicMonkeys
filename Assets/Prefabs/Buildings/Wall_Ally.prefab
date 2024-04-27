@@ -47,7 +47,7 @@ MonoBehaviour:
   health: 20
   movementSpeed: 0
   damage: 0
-  price: 20
+  price: 50
   isdeath: 0
   type: 5
   attackSpeed: 0
@@ -159,8 +159,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.5, y: 2.0095892, z: 1.2}
+  m_Center: {x: 0, y: 0.5047943, z: 0}
 --- !u!114 &7154678701511074207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +177,8 @@ MonoBehaviour:
   damageTaken: 0
   health: 0
   stats: {fileID: 5665077262659498700}
+  tagToAttack: 
+  enemy: {fileID: 0}
   attackSpeed: 0
   indextime: 0
 --- !u!114 &9166363285986767974

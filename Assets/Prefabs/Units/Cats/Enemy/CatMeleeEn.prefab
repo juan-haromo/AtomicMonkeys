@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 404364515201724918}
   m_Layer: 0
   m_Name: CatMeleeEn
-  m_TagString: Ally
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,6 +218,7 @@ MonoBehaviour:
   health: 0
   stats: {fileID: 5768837375621073366}
   tagToAttack: Ally
+  enemy: {fileID: 0}
   attackSpeed: 0
   indextime: 0
 --- !u!65 &8426667191463235727

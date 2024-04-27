@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+public class Fade : MonoBehaviour
 {
     // Pantalla negro
     public Image blackBG;

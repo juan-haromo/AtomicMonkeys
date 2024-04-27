@@ -1,12 +1,10 @@
-using JetBrains.Annotations;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class UnitMovement : MonoBehaviour
 {
     public float targetPosition;
-    private bool collidedEnemy = false;
-    private float movement;
+    protected bool collidedEnemy = false;
+    protected float movement;
     public int damageTaken = 0;
     public int health;
     public GameObject stats;
@@ -26,53 +24,54 @@ public class UnitMovement : MonoBehaviour
 
     void Update()
     {
-           
+
         if (!collidedEnemy)
         {
             transicions.Walking();
             Movement();
-            Debug.Log("collelere collele collele");
         }
         else
         {
-            Debug.Log("es hora de atacar");
             attack();
 
             if (indextime > attackSpeed)
             {
-            //UpdateHealth(damageTaken);
-            DealDamage();
-            //Debug.Log(health);
-            indextime = 0;
+                //UpdateHealth(damageTaken);
+                DealDamage();
+                //Debug.Log(health);
+                indextime = 0;
             }
             indextime += Time.deltaTime;
 
-            if (health <= 0)
-            {
-                health = 0;
-                transicions.Hurting();
-                transicions.Dying();
-                Destroy(gameObject, 5);
-                return;
-            }
+        }
+        Debug.Log(health);
+        if (health <= 0)
+        {
+            Debug.Log("Die");
+            health = 0;
+            transicions.Hurting();
+            transicions.Dying();
+            Destroy(gameObject, 5);
+            return;
         }
     }
 
     #region attack
 
     // heres the logic of a attack call
-    void attack()
+    protected void attack()
     {
         transicions.Attacking();
     }
     #endregion
 
     #region movement
-    private void Movement()
+    protected void Movement()
     {
 
         //We determine if the enemy is colliding or not, if its colliding it wont move
-        if(!collidedEnemy){
+        if (!collidedEnemy)
+        {
 
             //We look at which direction the unity should move
             if (transform.position.x < targetPosition)
@@ -103,22 +102,23 @@ public class UnitMovement : MonoBehaviour
     {
         if (other.CompareTag(tagToAttack))
         {
-        collidedEnemy = true;
-        movement = 0;
-        Debug.Log("chocaron");
+            collidedEnemy = true;
+            Debug.Log("chocaron");
             //Health(other.gameObject.GetComponent<UnitMovement>().damage);
 
             //We acces the damage that the other unit deals
             //damageTaken = other.gameObject.GetComponent<Stats>().Damage();
-
-            if(enemy == null)
+            if (enemy == null)
             {
                 enemy = other.GetComponent<UnitMovement>();
+                movement = 0;
             }
             enemy.DealDamage();
-        Debug.Log(damageTaken);
-            
+            Debug.Log(damageTaken);
+
         }
+
+
     }
 
     void OnTriggerExit(Collider other)
@@ -129,9 +129,9 @@ public class UnitMovement : MonoBehaviour
         enemy = null;
     }
 
-    public void UpdateHealth(int damageTaken)
+    public void UpdateHealth(int _damageTaken)
     {
-        health -= damageTaken;
+        health -= _damageTaken;
     }
 
     public void DealDamage()
@@ -140,8 +140,9 @@ public class UnitMovement : MonoBehaviour
         {
             enemy.health -= stats.GetComponentInChildren<Stats>().Damage();
         }
-        else 
+        else
         {
+            movement = stats.GetComponentInChildren<Stats>().MovementSpeed();
             collidedEnemy = false;
             Movement();
         }

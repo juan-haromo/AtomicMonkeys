@@ -9,12 +9,13 @@ public class DefaultBulletScript : MonoBehaviour
     public float bulletLifeTime;
     public Vector3 direction;
     private Rigidbody rb;
+    public string targetTag;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Invoke("destroyBullet", bulletLifeTime);
+        Invoke("DestroyBullet", bulletLifeTime);
     }
 
     private void FixedUpdate()
@@ -25,7 +26,7 @@ public class DefaultBulletScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag(targetTag))
         {
             collision.gameObject.GetComponent<UnitMovement>().UpdateHealth(bulletDamage);
             DestroyBullet();
@@ -37,8 +38,13 @@ public class DefaultBulletScript : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void setDirection(Vector3 target)
+    public void setDirection(Vector3 target, Vector3 start)
     {
-        direction = target - transform.position;
+        direction = target - start;
+    }
+
+    public void setTag(string tag)
+    {
+        targetTag = tag;
     }
 }

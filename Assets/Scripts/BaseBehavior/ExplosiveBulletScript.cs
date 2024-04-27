@@ -5,10 +5,19 @@ using static UnityEngine.GraphicsBuffer;
 
 public class ExplosiveBulletScript : MonoBehaviour
 {
-    public GameObject explosionPrefab;
+    public GameObject enemyExplosionPrefab;
+    public GameObject allyExplosionPrefab;
+    public string targetTag;
 
     private void OnDestroy()
     {
-        Instantiate(explosionPrefab, transform.position, transform.rotation);
+        if(targetTag == "Enemy")
+        {
+            Instantiate(enemyExplosionPrefab, transform.position, transform.rotation);
+        }
+        else if(targetTag == "Ally")
+        {
+            Instantiate(allyExplosionPrefab, transform.position, transform.rotation);
+        }
     }
 }
