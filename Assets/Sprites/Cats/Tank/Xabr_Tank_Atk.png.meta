@@ -1,0 +1,467 @@
+fileFormatVersion: 2
+guid: f03c2f36c75d53f46b2414f2538cab00
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 156
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef587d6b63140441b586c2c03d95efc
+      internalID: 2074545511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_1
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 0
+        width: 156
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8323058e917c53540a5664acc74f2583
+      internalID: -71032075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_2
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 0
+        width: 162
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd0fd3051f186c418d95a1def5f80d4
+      internalID: -760846207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_3
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 0
+        width: 162
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa25cd492d3f6a2458cdff445ea53fd3
+      internalID: 376318932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_4
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 0
+        width: 160
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f9be53432089344ad078dbda57bfd8
+      internalID: -1398279945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_5
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 1
+        width: 158
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327f9ae95e1045a42ae109cbbe3f74ca
+      internalID: -1877360813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_6
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 1
+        width: 158
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc08b86f67dde054284afb1e3025dfde
+      internalID: 309340195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_7
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 3
+        width: 178
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88130f665b8bbcd4c80da402676065f6
+      internalID: -1125654073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_8
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 0
+        width: 246
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf8c68a60de59fe41b18deb9c8b82272
+      internalID: -1689794458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_10
+      rect:
+        serializedVersion: 2
+        x: 2311
+        y: 5
+        width: 232
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3608795b40e2642a0ca5dee8ec0052
+      internalID: -649169835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_11
+      rect:
+        serializedVersion: 2
+        x: 2589
+        y: 3
+        width: 178
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9341c9456515f7498d879ce76114ed5
+      internalID: 1744321350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_12
+      rect:
+        serializedVersion: 2
+        x: 2843
+        y: 1
+        width: 158
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e5e57503fb1cd4b91bc8980efceefd
+      internalID: 1334403692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_13
+      rect:
+        serializedVersion: 2
+        x: 3099
+        y: 1
+        width: 158
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a0c56d30a5e5e49b2032157d969883
+      internalID: 225576330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_14
+      rect:
+        serializedVersion: 2
+        x: 3351
+        y: 0
+        width: 160
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0920d8f3cc4f2234fb8ad5d710149fcb
+      internalID: -1161049162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_15
+      rect:
+        serializedVersion: 2
+        x: 3607
+        y: 0
+        width: 162
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67847f10ad77084399be71ad1cb50bf
+      internalID: 109007828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xabr_Tank_Atk_16
+      rect:
+        serializedVersion: 2
+        x: 3863
+        y: 0
+        width: 162
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44bfe70b849df264bb829408071616b0
+      internalID: 378946747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 470a7a912281ea240a8094cc6971c869
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Xabr_Tank_Atk_0: 2074545511
+      Xabr_Tank_Atk_1: -71032075
+      Xabr_Tank_Atk_10: -649169835
+      Xabr_Tank_Atk_11: 1744321350
+      Xabr_Tank_Atk_12: 1334403692
+      Xabr_Tank_Atk_13: 225576330
+      Xabr_Tank_Atk_14: -1161049162
+      Xabr_Tank_Atk_15: 109007828
+      Xabr_Tank_Atk_16: 378946747
+      Xabr_Tank_Atk_2: -760846207
+      Xabr_Tank_Atk_3: 376318932
+      Xabr_Tank_Atk_4: -1398279945
+      Xabr_Tank_Atk_5: -1877360813
+      Xabr_Tank_Atk_6: 309340195
+      Xabr_Tank_Atk_7: -1125654073
+      Xabr_Tank_Atk_8: -1689794458
+      Xabr_Tank_Atk_9: -725488869
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

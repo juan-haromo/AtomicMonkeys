@@ -11,6 +11,7 @@ public class Economy : MonoBehaviour
     public float moneyValue=1;
     public static Economy instance;
     public float upgradeCost;
+    public int upgradeCount = 1;
 
     // Update is called once per frame
     private void Awake()
@@ -30,11 +31,13 @@ public class Economy : MonoBehaviour
 
     void MoneyUpgrade()
     {
-        if(money>upgradeCost)
-        Economy.instance.moneyValue += (moneyValue*.75f);
-        Economy.instance.money -= upgradeCost;
-        Economy.instance.upgradeCost = upgradeCost*2;
-
+        if (money > upgradeCost && upgradeCount <= 5)
+        {
+            Economy_IA.instance.money -= upgradeCost;
+            Economy_IA.instance.moneyValue += (moneyValue * 0.25f);
+            Economy_IA.instance.upgradeCost = upgradeCost * 4;
+            upgradeCount++;
+        }
     }
 
     public bool Buy(int cost)
@@ -53,6 +56,11 @@ public class Economy : MonoBehaviour
         instance.moneyDisplay.color = Color.red;
         yield return new WaitForSeconds(1.5f);
         instance.moneyDisplay.color = Color.white;
+    }
+
+    public void AddMoney(int amount)
+    {
+        money += amount;
     }
 
 }

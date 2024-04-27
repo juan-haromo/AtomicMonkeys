@@ -6,12 +6,18 @@ public class Stats : MonoBehaviour
 {
     // Inicialize stats
     [SerializeField] private int health;
+    private int maxHealt;
     [SerializeField] private float movementSpeed;
     [SerializeField] private int damage;
     [SerializeField] private int price;
     [SerializeField] private bool isdeath = false;
     [SerializeField] private int type;
+    [SerializeField] private float attackSpeed;
 
+    private void Awake()
+    {
+        maxHealt = health;
+    }
     // funcions thats return valeus
     #region Valeus
     public int Health()
@@ -37,6 +43,11 @@ public class Stats : MonoBehaviour
     {
         return isdeath;
     }
+
+    public float AttackSpeed()
+    {
+        return attackSpeed;
+    }
     #endregion
 
     // funtion for take damage
@@ -49,6 +60,10 @@ public class Stats : MonoBehaviour
             isdeath = true;
         }
     }
-
+    public bool IsMaxHealt()
+    {
+        return maxHealt == health;
+    }
     public int Cost { get { return price; } }
+    public int Type {  get { return type; } }
 }

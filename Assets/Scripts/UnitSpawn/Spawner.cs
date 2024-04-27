@@ -25,36 +25,35 @@ public class Spawner : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Q))
         {
             SpawnUnit(unitToSpawn, 0);
-            unitToSpawn = null;
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
             SpawnUnit(unitToSpawn, 1);
-            unitToSpawn = null;
         }
         if (Input.GetKeyUp(KeyCode.E))
         {
-            SpawnUnit(unitToSpawn, 2);
-            unitToSpawn = null;
+           SpawnUnit(unitToSpawn, 2);
         }
         if (Input.GetKeyUp(KeyCode.R))
         {
             SpawnUnit(unitToSpawn, 3);
-            unitToSpawn = null;
+            
         }
         if (Input.GetKeyUp(KeyCode.T))
         {
             SpawnUnit(unitToSpawn, 4);
-            unitToSpawn = null;
+            
+            
         }
     }
 
-    public void SpawnUnit(GameObject unitToSpwan, int positionToSpwan)
+    public void SpawnUnit(GameObject _unitToSpwan, int positionToSpwan)
     {
-        //Get enemy script to check price
-        if (Economy.instance.Buy(unitToSpawn.GetComponentInChildren<Stats>().Cost))//Script economy
+        if (Economy.instance.Buy(_unitToSpwan.GetComponentInChildren<Stats>().Cost))
         {
-            Instantiate(unitToSpwan, spawnPoints[positionToSpwan].position, unitToSpwan.transform.rotation);
+            Instantiate(_unitToSpwan, spawnPoints[positionToSpwan].position, _unitToSpwan.transform.rotation);
+            WaveManager.instance.enemies[positionToSpwan].AddEnemy(_unitToSpwan.GetComponentInChildren<Stats>().Type);
+            unitToSpawn = null;
         }
     }
 
