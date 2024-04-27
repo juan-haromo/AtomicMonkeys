@@ -10,6 +10,7 @@ public class Note_IA : MonoBehaviour
     GameObject defensePlaced;
     public Color hoverColor;
 
+
     private Renderer originalRenderer;
 
   
@@ -25,6 +26,17 @@ public class Note_IA : MonoBehaviour
             {
                 defensePlaced = (GameObject)Instantiate(DefenseManager_IA.instance.turret, transform.position, transform.rotation);
             }
+        }
+    }
+    public bool candBuild()
+    {
+        if(defensePlaced == null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
