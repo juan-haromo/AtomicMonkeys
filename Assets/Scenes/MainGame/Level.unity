@@ -4168,6 +4168,10 @@ PrefabInstance:
       value: Base
       objectReference: {fileID: 0}
     - target: {fileID: 3527082632495506359, guid: 79b67b5de4a326242b7ce864f634d32c, type: 3}
+      propertyPath: upgradeCost
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527082632495506359, guid: 79b67b5de4a326242b7ce864f634d32c, type: 3}
       propertyPath: moneyDisplay
       value: 
       objectReference: {fileID: 824729354}

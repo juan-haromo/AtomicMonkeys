@@ -38,6 +38,7 @@ public class Enemy_IA : MonoBehaviour
                     break;
                 default:
                     Debug.Log("waiting");
+                    defaultSpawn();
                     break;
             }
             indextime = 0;
