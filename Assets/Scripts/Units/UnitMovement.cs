@@ -102,6 +102,7 @@ public class UnitMovement : MonoBehaviour
         if (other.CompareTag(tagToAttack))
         {
         collidedEnemy = true;
+        movement = 0;
         Debug.Log("chocaron");
             //Health(other.gameObject.GetComponent<UnitMovement>().damage);
 
@@ -109,12 +110,7 @@ public class UnitMovement : MonoBehaviour
             //damageTaken = other.gameObject.GetComponent<Stats>().Damage();
             damageTaken = other.GetComponentInChildren<Stats>().Damage();
         Debug.Log(damageTaken); 
-        }
-        else 
-        {
-            movement = 0;
-        }
-           
+        }           
     }
 
     void OnTriggerExit(Collider other)

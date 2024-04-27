@@ -21,11 +21,13 @@ public class Spawners_IA : MonoBehaviour
     }
     public void IA_Spawns(int line)
     {
+        Debug.Log("spawnea");
+        Debug.Log(line);
         switch(line)
         {
             case 0:
                 SpawnUnit(unitToSpawn, 0);
-                Economy_IA.instance.Buy(unitToSpawn.GetComponentInChildren<Stats>().Cost);
+                //Economy_IA.instance.Buy(unitToSpawn.GetComponentInChildren<Stats>().Cost);
                 break;
             case 1:
                 SpawnUnit(unitToSpawn, 1);
@@ -46,7 +48,7 @@ public class Spawners_IA : MonoBehaviour
     }
     public void SpawnUnit(GameObject _unitToSpwan, int positionToSpwan)
     {
-        if (Economy.instance.Buy(_unitToSpwan.GetComponentInChildren<Stats>().Cost))
+        if (Economy_IA.instance.Buy(_unitToSpwan.GetComponentInChildren<Stats>().Cost))
         {
             Instantiate(_unitToSpwan, spawnPoints[positionToSpwan].position, _unitToSpwan.transform.rotation);
             unitToSpawn = null;
