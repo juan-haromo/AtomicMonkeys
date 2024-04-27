@@ -27,8 +27,8 @@ public class Economy_IA : MonoBehaviour
         if (money > upgradeCost && upgradecount < 5)
         {
             Economy_IA.instance.money -= upgradeCost;
-            Economy_IA.instance.moneyValue += (moneyValue * 0.25f);
-            Economy_IA.instance.upgradeCost = upgradeCost * 4;
+            Economy_IA.instance.moneyValue += (moneyValue * .75f);
+            Economy_IA.instance.upgradeCost = upgradeCost * 2;
             upgradecount++;
         }
     }
