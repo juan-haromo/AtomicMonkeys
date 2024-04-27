@@ -168,6 +168,8 @@ MonoBehaviour:
   enemy: {fileID: 0}
   attackSpeed: 0
   indextime: 0
+  resultScreen: {fileID: 0}
+  off: []
 --- !u!1 &2629627892080898143
 GameObject:
   m_ObjectHideFlags: 0
