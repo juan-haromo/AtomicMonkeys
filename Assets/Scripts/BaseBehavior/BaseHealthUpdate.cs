@@ -1,24 +1,24 @@
 using UnityEngine;
 
-public class UnitMovement : MonoBehaviour
+public class BaseHealthUpdate : UnitMovement
 {
-    public float targetPosition;
-    protected bool collidedEnemy = false;
-    protected float movement;
-    public int damageTaken = 0;
-    public int health;
-    public GameObject stats;
-    public string tagToAttack;
-    public UnitMovement enemy = null;
+    //public float targetPosition;
+    //private bool collidedEnemy = false;
+    //private float movement;
+    //public int damageTaken = 0;
+    //public int health;
+    //public GameObject stats;
+    //public string tagToAttack;
+    //public UnitMovement enemy = null;
 
-    public float attackSpeed;
-    public float indextime = 0;
-    AnimationsTransicions transicions;
+    //public float attackSpeed;
+    //public float indextime = 0;
+    //AnimationsTransicions transicions;
     private void Awake()
     {
         movement = GetComponentInChildren<Stats>().MovementSpeed();
         health = GetComponentInChildren<Stats>().Health();
-        transicions = GetComponentInChildren<AnimationsTransicions>();
+        //transicions = GetComponentInChildren<AnimationsTransicions>();
         attackSpeed = GetComponentInChildren<Stats>().AttackSpeed();
     }
 
@@ -27,7 +27,7 @@ public class UnitMovement : MonoBehaviour
 
         if (!collidedEnemy)
         {
-            transicions.Walking();
+            //transicions.Walking();
             Movement();
         }
         else
@@ -49,9 +49,9 @@ public class UnitMovement : MonoBehaviour
         {
             Debug.Log("Die");
             health = 0;
-            transicions.Hurting();
-            transicions.Dying();
-            Destroy(gameObject, 5);
+            //transicions.Hurting();
+            //transicions.Dying();
+            Destroy(gameObject);
             return;
         }
     }
@@ -59,14 +59,14 @@ public class UnitMovement : MonoBehaviour
     #region attack
 
     // heres the logic of a attack call
-    protected void attack()
+    void attack()
     {
-        transicions.Attacking();
+        //transicions.Attacking();
     }
     #endregion
 
     #region movement
-    protected void Movement()
+    private void Movement()
     {
 
         //We determine if the enemy is colliding or not, if its colliding it wont move

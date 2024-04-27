@@ -45,7 +45,7 @@ public class BaseAttack : MonoBehaviour
             SingleTargetCheck();
         }
         GameObject bullet = Instantiate(currentBullet, transform.position, transform.rotation);
-        bullet.GetComponent<DefaultBulletScript>().setDirection(target);
+        bullet.GetComponent<DefaultBulletScript>().setDirection(target, transform.position);
         bullet.GetComponent<DefaultBulletScript>().setTag(targetTag);
     }
 

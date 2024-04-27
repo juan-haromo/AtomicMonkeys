@@ -14,11 +14,10 @@ GameObject:
   - component: {fileID: 8130380163534534408}
   - component: {fileID: 1815907479316944363}
   - component: {fileID: 7991447226947296202}
-  - component: {fileID: 3527082632495506359}
-  - component: {fileID: 8404451424711329643}
+  - component: {fileID: 2760966885023252612}
   m_Layer: 0
-  m_Name: Base
-  m_TagString: Untagged
+  m_Name: Base_Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,8 +109,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3464075, y: 1, z: 0.9999999}
-  m_Center: {x: 0.17320621, y: 0, z: 0}
+  m_Size: {x: 1.9960995, y: 1, z: 0.9999999}
+  m_Center: {x: -0.006311373, y: 0, z: 0}
 --- !u!114 &1815907479316944363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletRate: 1
-  targetTag: Enemy
+  targetTag: Ally
   maxTargets: 3
   currentTargetIndex: 0
   basicBulletPrefab: {fileID: 779634129092594812, guid: aeefe63f5d922af49aa3c85d188cb241, type: 3}
@@ -147,26 +146,9 @@ MonoBehaviour:
   allyExplosiveBulletPrefab: {fileID: 779634129092594812, guid: 8ee24d83888257449ab6690088d28b15, type: 3}
   smallBulletPrefab: {fileID: 779634129092594812, guid: 841466483ec70284794fa6f6c8cd9405, type: 3}
   detectionRangeScript: {fileID: 3211604373178776265}
-  baseHealth: {fileID: 1815907479316944363}
+  baseHealth: {fileID: 0}
   healAmmount: 30
---- !u!114 &3527082632495506359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160642305011533293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c5387da9995197408add9a099162f50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyDisplay: {fileID: 0}
-  money: 0
-  moneyValue: 1
-  upgradeCost: 0
-  upgradeCount: 1
---- !u!114 &8404451424711329643
+--- !u!114 &2760966885023252612
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,7 +164,7 @@ MonoBehaviour:
   damageTaken: 0
   health: 0
   stats: {fileID: 2629627892080898143}
-  tagToAttack: Enemy
+  tagToAttack: Ally
   enemy: {fileID: 0}
   attackSpeed: 0
   indextime: 0
@@ -199,7 +181,7 @@ GameObject:
   - component: {fileID: 467286455591988334}
   - component: {fileID: 4426868283393624726}
   - component: {fileID: 3211604373178776265}
-  - component: {fileID: 6958505818826102290}
+  - component: {fileID: 565621592448072857}
   m_Layer: 0
   m_Name: BaseRange
   m_TagString: Untagged
@@ -308,9 +290,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesInRange: []
-  targetTag: Enemy
+  targetTag: Ally
   baseAttack: {fileID: 7991447226947296202}
---- !u!114 &6958505818826102290
+--- !u!114 &565621592448072857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -327,5 +309,5 @@ MonoBehaviour:
   damage: 0
   price: 0
   isdeath: 0
-  type: 0
+  type: 5
   attackSpeed: 0
