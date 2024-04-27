@@ -33,7 +33,6 @@ public class BaseAttack : MonoBehaviour
     void Update()
     {
         TemporalInputs();
-        UpdateEnemiesArray();
     }
 
     private void shootBullet()
@@ -48,21 +47,6 @@ public class BaseAttack : MonoBehaviour
         }
         GameObject bullet = Instantiate(currentBullet, transform.position, transform.rotation);
         bullet.GetComponent<DefaultBulletScript>().setDirection(target);
-    }
-
-    private void UpdateEnemiesArray()
-    {
-        foreach (GameObject enemy in enemies) 
-        {
-            if(enemy == null)
-            {
-                enemies.Remove(enemy);
-                if(currentTargetIndex >= enemies.Count)
-                {
-                    currentTargetIndex = 0;
-                }
-            }
-        }
     }
 
     private void MultiTargetCheck()

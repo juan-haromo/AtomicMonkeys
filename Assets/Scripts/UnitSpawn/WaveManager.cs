@@ -19,6 +19,7 @@ public class WaveManager : MonoBehaviour
 
         public void AddEnemy(int type)
         {
+            print(type);
             switch (type)
             {
                 case 0:
