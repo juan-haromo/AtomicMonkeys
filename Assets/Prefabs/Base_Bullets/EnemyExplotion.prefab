@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3395966265118186605}
   - component: {fileID: 7958433763450960377}
   m_Layer: 0
-  m_Name: Explotion
+  m_Name: EnemyExplotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,3 +150,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explotionLifeTime: 0.4
   explotionDamage: 2
+  targetTag: Enemy

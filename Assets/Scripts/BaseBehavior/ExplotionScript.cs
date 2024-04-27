@@ -6,6 +6,7 @@ public class ExplotionScript : MonoBehaviour
 {
     public float explotionLifeTime;
     public int explotionDamage;
+    public string targetTag;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,7 @@ public class ExplotionScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag(targetTag))
         {
             collision.gameObject.GetComponent<UnitMovement>().UpdateHealth(explotionDamage);
         }
