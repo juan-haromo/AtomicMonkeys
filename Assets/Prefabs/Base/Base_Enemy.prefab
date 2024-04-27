@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1815907479316944363}
   - component: {fileID: 7991447226947296202}
   m_Layer: 0
-  m_Name: Base
+  m_Name: Base_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletRate: 1
-  targetTag: Enemy
+  targetTag: Ally
   maxTargets: 3
   currentTargetIndex: 0
   basicBulletPrefab: {fileID: 779634129092594812, guid: aeefe63f5d922af49aa3c85d188cb241, type: 3}
