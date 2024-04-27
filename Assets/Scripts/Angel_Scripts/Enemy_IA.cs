@@ -77,7 +77,7 @@ public class Enemy_IA : MonoBehaviour
         }
         else
         {
-            if (true)
+            if (Economy_IA.instance.money > Economy_IA.instance.upgradeCost)
             {
                 return 3;
             }
@@ -88,11 +88,12 @@ public class Enemy_IA : MonoBehaviour
     // here will place the torret
     void PlaceTorret()
     {
-            
+        Debug.Log("place torret");
     }
     // here will place an unit
     void Placeunit(int line)
     {
+        Debug.Log("place unit");
         int auxTanks, auxMelee, auxRange;
         auxTanks = WaveManager.instance.enemies[line].tankAmount;
         auxMelee = WaveManager.instance.enemies[line].meleeAmount;
@@ -100,25 +101,62 @@ public class Enemy_IA : MonoBehaviour
 
         if (auxRange >= auxTanks && auxRange >= auxMelee)
         {
-            Spawners_IA.instance.ChangeUnitToSpawn(tank);
-            Spawners_IA.instance.IA_Spawns(line);
+            if (tank.GetComponentInChildren<Stats>().Cost < Economy_IA.instance.money)
+            {
+                Debug.Log("si hay dinero para hacer tanques");
+                Spawners_IA.instance.ChangeUnitToSpawn(tank);
+                Spawners_IA.instance.IA_Spawns(line);
+            }
+            else
+            {
+                Debug.Log("no hay dinero para los tanques");
+            }
         }
         else if (auxTanks >= auxRange && auxTanks >= auxMelee)
         {
-            Spawners_IA.instance.ChangeUnitToSpawn(melee);
-            Spawners_IA.instance.IA_Spawns(line);
+            if (melee.GetComponentInChildren<Stats>().Cost < Economy_IA.instance.money)
+            {
+                Debug.Log("si hay dinero para los melees");
+                Spawners_IA.instance.ChangeUnitToSpawn(melee);
+                Spawners_IA.instance.IA_Spawns(line);
+            }
+            else
+            {
+                Debug.Log("no hay dinero para los melees");
+            }
         }
         else if (auxMelee >= auxRange && auxMelee >= auxTanks)
         {
-            Spawners_IA.instance.ChangeUnitToSpawn(range);
-            Spawners_IA.instance.IA_Spawns(line);
+            if (range.GetComponentInChildren<Stats>().Cost < Economy_IA.instance.money)
+            {
+                Debug.Log("si hay dinero para range");
+                Spawners_IA.instance.ChangeUnitToSpawn(range);
+                Spawners_IA.instance.IA_Spawns(line);
+            }
+            else
+            {
+                Debug.Log("no hay dinero para range");
+            }
         }
-
+        else 
+        {
+            if (melee.GetComponentInChildren<Stats>().Cost < Economy_IA.instance.money)
+            {
+                Debug.Log("hay dinero para la opcion default");
+                Spawners_IA.instance.ChangeUnitToSpawn(melee);
+                Spawners_IA.instance.IA_Spawns(line);
+            }
+            else
+            {
+                Debug.Log("no hay dinero para la opcion default");
+            }
+        }
     }
 
     // here will buy economy
     void PlaceEconomy()
     {
+        Debug.Log("Economy");
         Economy_IA.instance.MoneyUpgrade();
     }
     #endregion 

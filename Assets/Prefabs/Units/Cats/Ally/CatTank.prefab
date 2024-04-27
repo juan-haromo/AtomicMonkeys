@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 928900f130eaeea43ab46794f99c693d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: 8
+  targetPosition: 120
   damageTaken: 0
   health: 50
   stats: {fileID: 7247584269218476417}

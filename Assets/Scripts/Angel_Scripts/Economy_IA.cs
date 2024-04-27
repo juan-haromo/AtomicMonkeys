@@ -35,11 +35,7 @@ public class Economy_IA : MonoBehaviour
 
     public bool Buy(int cost)
     {
-        if (money > cost)
-        {
-            Economy.instance.money -= cost;
-            return true;
-        }
-        return false;
+            Economy_IA.instance.money -= cost;
+        return true;
     }
 }
