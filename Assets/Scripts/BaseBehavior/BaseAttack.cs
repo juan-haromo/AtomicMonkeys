@@ -6,18 +6,20 @@ public class BaseAttack : MonoBehaviour
 {
     public float bulletRate;
     private Vector3 target;
-    //public GameObject[] enemies;
-    
+    public string targetTag;
+
 
     //Variables Nuevas para los especiales de la base
     public int maxTargets;
     public int currentTargetIndex;
     public GameObject basicBulletPrefab;
-    public GameObject explosiveBulletPrefab;
+    public GameObject enemyExplosiveBulletPrefab;
+    public GameObject allyExplosiveBulletPrefab;
     public GameObject smallBulletPrefab;
     private GameObject currentBullet;
-    public List<GameObject> enemies;
     private bool isMultiTarget;
+    public DetectionRangeScript detectionRangeScript;
+    private bool isShooting;
 
     //Estas quiza podrian estar en otro script llamado BaseDefense o algo asi
     public BaseHealth baseHealth;
@@ -26,7 +28,10 @@ public class BaseAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isShooting = false;
         isMultiTarget = false;
+        currentBullet = basicBulletPrefab;
+        bulletRate = 1f;
     }
 
     // Update is called once per frame
@@ -47,37 +52,42 @@ public class BaseAttack : MonoBehaviour
         }
         GameObject bullet = Instantiate(currentBullet, transform.position, transform.rotation);
         bullet.GetComponent<DefaultBulletScript>().setDirection(target);
+        bullet.GetComponent<DefaultBulletScript>().setTag(targetTag);
     }
 
     private void MultiTargetCheck()
     {
-        if (enemies[currentTargetIndex] != null)
+        if (detectionRangeScript.getEnemyFromIndex(currentTargetIndex) != null)
         {
-            target = enemies[currentTargetIndex].transform.position;
+            target = detectionRangeScript.getEnemyFromIndex(currentTargetIndex).position;
             currentTargetIndex += 1;
-            if (currentTargetIndex >= enemies.Count || currentTargetIndex >= maxTargets)
+            if (currentTargetIndex >= detectionRangeScript.getEnemyCount() || currentTargetIndex >= maxTargets)
             {
                 currentTargetIndex = 0;
             }
+        }
+        else if (currentTargetIndex > 0)
+        {
+            currentTargetIndex--;
         }
     }
 
     private void SingleTargetCheck()
     {
-        if (enemies[0]!=null)
-        {
-            target = enemies[0].transform.position;
-        }
+        target = detectionRangeScript.getEnemyFromIndex(0).position;
     }
 
-    private void StartShooting()
+    public void StartShooting()
     {
         InvokeRepeating("shootBullet", 0f, bulletRate);
+        currentTargetIndex = 0;
+        isShooting = true;
     }
 
-    private void StopShooting()
+    public void StopShooting()
     {
         CancelInvoke("shootBullet");
+        isShooting = false;
     }
 
     private void HealBase()
@@ -87,17 +97,17 @@ public class BaseAttack : MonoBehaviour
 
     private void TemporalInputs()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartShooting();
-        }
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            StopShooting();
-        }
         if (Input.GetKeyUp(KeyCode.Alpha1))
         {
             //Princess
+            if (isShooting == true)
+            {
+                StopShooting();
+                isMultiTarget = false;
+                currentBullet = basicBulletPrefab;
+                bulletRate = 1f;
+                StartShooting();
+            }
             isMultiTarget = false;
             currentBullet = basicBulletPrefab;
             bulletRate = 1f;
@@ -105,13 +115,43 @@ public class BaseAttack : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Alpha2))
         {
             //Canoneer
-            isMultiTarget= false;
-            currentBullet = explosiveBulletPrefab;
+            if (isShooting == true)
+            {
+                StopShooting();
+                isMultiTarget = false;
+                if(targetTag == "Enemy")
+                {
+                    currentBullet = enemyExplosiveBulletPrefab;
+                }
+                else if(targetTag == "Ally")
+                {
+                    currentBullet = allyExplosiveBulletPrefab;
+                }
+                bulletRate = 2f;
+                StartShooting();
+            }
+            isMultiTarget = false;
+            if (targetTag == "Enemy")
+            {
+                currentBullet = enemyExplosiveBulletPrefab;
+            }
+            else if (targetTag == "Ally")
+            {
+                currentBullet = allyExplosiveBulletPrefab;
+            }
             bulletRate = 2f;
         }
         if (Input.GetKeyUp(KeyCode.Alpha3))
         {
             //Dager Duchess
+            if (isShooting == true)
+            {
+                StopShooting();
+                isMultiTarget = true;
+                currentBullet = smallBulletPrefab;
+                bulletRate = 0.3f;
+                StartShooting();
+            }
             isMultiTarget = true;
             currentBullet = smallBulletPrefab;
             bulletRate = 0.3f;

@@ -45,14 +45,15 @@ public class UnitMovement : MonoBehaviour
             }
             indextime += Time.deltaTime;
 
-            if (health <= 0)
-            {
-                health = 0;
-                transicions.Hurting();
-                transicions.Dying();
-                Destroy(gameObject, 5);
-                return;
-            }
+        }
+
+        if (health <= 0)
+        {
+            health = 0;
+            transicions.Hurting();
+            transicions.Dying();
+            Destroy(gameObject, 5);
+            return;
         }
     }
 

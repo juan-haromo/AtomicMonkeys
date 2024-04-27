@@ -151,4 +151,5 @@ MonoBehaviour:
   bulletDamage: 1
   bulletSpeed: 8
   bulletLifeTime: 3
-  direction: {x: 0, y: 0}
+  direction: {x: 0, y: 0, z: 0}
+  targetTag: 
