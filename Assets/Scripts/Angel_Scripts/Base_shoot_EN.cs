@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Base_shoot_EN : MonoBehaviour
+public class Base_shoot : MonoBehaviour
 {
     [SerializeField] GameObject disparo;
     [SerializeField] GameObject target;
@@ -27,7 +27,7 @@ public class Base_shoot_EN : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Ally"))
         {
             Debug.Log("alguien esta en el rango de la torreta");
             target = other.gameObject;
@@ -37,7 +37,7 @@ public class Base_shoot_EN : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Ally"))
         {
             canShoot = false;
         }
