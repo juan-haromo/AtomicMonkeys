@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 09601de225a76934ebf8da6a3d2f421a
+guid: ff2f65742ab293040a711289e63fc5e3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nachito_torret_Idle_0
+      name: orangutan_Distance_death_0
       rect:
         serializedVersion: 2
         x: 77
-        y: 72
-        width: 116
-        height: 116
+        y: 59
+        width: 121
+        height: 155
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fb49cc0dc18a104589ecdc0242c2563
-      internalID: 19413010
+      spriteID: cf4b841543ef2a54eacbfae49cccb566
+      internalID: -1707104393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_1
+      name: orangutan_Distance_death_1
       rect:
         serializedVersion: 2
-        x: 357
-        y: 72
-        width: 116
-        height: 116
+        x: 358
+        y: 59
+        width: 120
+        height: 155
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6414e6d2edf26aa4792b777e74cd51bd
-      internalID: -177273572
+      spriteID: 9e9349843d51f2b48a2bee160119a3ad
+      internalID: 809458494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_2
+      name: orangutan_Distance_death_2
       rect:
         serializedVersion: 2
-        x: 637
-        y: 72
-        width: 115
-        height: 118
+        x: 639
+        y: 59
+        width: 118
+        height: 158
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8479df6c069b782488f7a0048a5eea57
-      internalID: -174065784
+      spriteID: 5aab926cd48bc72408228e615f5c3e55
+      internalID: -155315207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_3
+      name: orangutan_Distance_death_3
       rect:
         serializedVersion: 2
-        x: 917
-        y: 72
-        width: 115
-        height: 118
+        x: 919
+        y: 59
+        width: 118
+        height: 158
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07714a3de583d1444ae5212bf476cb2c
-      internalID: 1136996421
+      spriteID: 1de44148db2dcbb40bc41ba10631d33c
+      internalID: -2037520336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_4
+      name: orangutan_Distance_death_4
       rect:
         serializedVersion: 2
-        x: 1197
-        y: 72
-        width: 115
-        height: 122
+        x: 1185
+        y: 61
+        width: 145
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d48eda5b5fc8e3e48aca24b3cf5100b8
-      internalID: -1432934264
+      spriteID: ef5c88f640b56ea47a6b1609a09b86cc
+      internalID: -606206285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_5
+      name: orangutan_Distance_death_6
       rect:
         serializedVersion: 2
-        x: 1477
-        y: 72
-        width: 115
-        height: 122
+        x: 1463
+        y: 58
+        width: 148
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52f548e99626c4944817851a84c600b8
-      internalID: -612742988
+      spriteID: 55ad7aa76f674ac4e99caf9f9732892e
+      internalID: -20822440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_6
+      name: orangutan_Distance_death_11
       rect:
         serializedVersion: 2
-        x: 1757
-        y: 72
-        width: 115
-        height: 118
+        x: 1727
+        y: 53
+        width: 178
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9335eea8824f21440b38b66c6326575d
-      internalID: -303438925
+      spriteID: 1e192715d19e9bf49aa57e684467d997
+      internalID: 797033729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_7
+      name: orangutan_Distance_death_18
       rect:
         serializedVersion: 2
-        x: 2037
-        y: 72
-        width: 115
-        height: 118
+        x: 2027
+        y: 58
+        width: 155
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +271,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1c1e9d16112d134dbd69aefa4fe32c4
-      internalID: 1617481676
+      spriteID: 96c6d0ed7849e214d8814ade52d65737
+      internalID: 1291987678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orangutan_Distance_death_21
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 62
+        width: 157
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fcf50a1245d48a4f96fc5ce898072ed
+      internalID: -2023057588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orangutan_Distance_death_22
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 62
+        width: 157
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4ca0c92ab359b4cb4627a046615759
+      internalID: -2032414124
       vertices: []
       indices: 
       edges: []
@@ -280,7 +322,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 64e4bde405bf4fc4694a86d335eeebd8
+    spriteID: bdeceb9a978f71845b52a64f3ccc3e19
     internalID: 0
     vertices: []
     indices: 
@@ -288,14 +330,29 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Nachito_torret_Idle_0: 19413010
-      Nachito_torret_Idle_1: -177273572
-      Nachito_torret_Idle_2: -174065784
-      Nachito_torret_Idle_3: 1136996421
-      Nachito_torret_Idle_4: -1432934264
-      Nachito_torret_Idle_5: -612742988
-      Nachito_torret_Idle_6: -303438925
-      Nachito_torret_Idle_7: 1617481676
+      orangutan_Distance_death_0: -1707104393
+      orangutan_Distance_death_1: 809458494
+      orangutan_Distance_death_10: 1605943125
+      orangutan_Distance_death_11: 797033729
+      orangutan_Distance_death_12: -1038770438
+      orangutan_Distance_death_13: -1803590117
+      orangutan_Distance_death_14: -1024809588
+      orangutan_Distance_death_15: 929052677
+      orangutan_Distance_death_16: 1038800289
+      orangutan_Distance_death_17: 1961483982
+      orangutan_Distance_death_18: 1291987678
+      orangutan_Distance_death_19: -1521438280
+      orangutan_Distance_death_2: -155315207
+      orangutan_Distance_death_20: -1989084366
+      orangutan_Distance_death_21: -2023057588
+      orangutan_Distance_death_22: -2032414124
+      orangutan_Distance_death_3: -2037520336
+      orangutan_Distance_death_4: -606206285
+      orangutan_Distance_death_5: 1457324407
+      orangutan_Distance_death_6: -20822440
+      orangutan_Distance_death_7: -489775597
+      orangutan_Distance_death_8: 53393094
+      orangutan_Distance_death_9: 1216804255
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

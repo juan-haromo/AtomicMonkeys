@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 09601de225a76934ebf8da6a3d2f421a
+guid: cf4b05ee2f937ea44b985163df8ce2be
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nachito_torret_Idle_0
+      name: Nachito_torret_atk_0
       rect:
         serializedVersion: 2
-        x: 77
-        y: 72
+        x: 78
+        y: 73
         width: 116
-        height: 116
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fb49cc0dc18a104589ecdc0242c2563
-      internalID: 19413010
+      spriteID: 725ddcb48b53119408252985131de2de
+      internalID: -1323107574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_1
+      name: Nachito_torret_atk_1
       rect:
         serializedVersion: 2
-        x: 357
-        y: 72
+        x: 358
+        y: 73
         width: 116
-        height: 116
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6414e6d2edf26aa4792b777e74cd51bd
-      internalID: -177273572
+      spriteID: 52dfc6fba6d0b1b4aa59f6709409967d
+      internalID: 1779657896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_2
+      name: Nachito_torret_atk_2
       rect:
         serializedVersion: 2
-        x: 637
-        y: 72
-        width: 115
-        height: 118
+        x: 638
+        y: 73
+        width: 114
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8479df6c069b782488f7a0048a5eea57
-      internalID: -174065784
+      spriteID: fb615de663c04454781c89a565b04c8e
+      internalID: 318431192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_3
+      name: Nachito_torret_atk_3
       rect:
         serializedVersion: 2
-        x: 917
-        y: 72
-        width: 115
-        height: 118
+        x: 918
+        y: 73
+        width: 114
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07714a3de583d1444ae5212bf476cb2c
-      internalID: 1136996421
+      spriteID: dcd578196aa70844a8df6a0f0f7a8990
+      internalID: -275129595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_4
+      name: Nachito_torret_atk_4
       rect:
         serializedVersion: 2
-        x: 1197
-        y: 72
-        width: 115
-        height: 122
+        x: 1198
+        y: 73
+        width: 114
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d48eda5b5fc8e3e48aca24b3cf5100b8
-      internalID: -1432934264
+      spriteID: 2dd0f093371286c40b22628b9ad12aa1
+      internalID: 1140658840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_5
+      name: Nachito_torret_atk_5
       rect:
         serializedVersion: 2
-        x: 1477
+        x: 1478
         y: 72
-        width: 115
-        height: 122
+        width: 114
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52f548e99626c4944817851a84c600b8
-      internalID: -612742988
+      spriteID: 170fa13772d8e7242a036bb87d1df31e
+      internalID: 37339111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_6
+      name: Nachito_torret_atk_6
       rect:
         serializedVersion: 2
-        x: 1757
+        x: 1758
         y: 72
-        width: 115
-        height: 118
+        width: 119
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9335eea8824f21440b38b66c6326575d
-      internalID: -303438925
+      spriteID: 87e21c9133f49e24abd59e5004335502
+      internalID: 2007071697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_7
+      name: Nachito_torret_atk_7
       rect:
         serializedVersion: 2
-        x: 2037
-        y: 72
-        width: 115
-        height: 118
+        x: 2038
+        y: 73
+        width: 114
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1c1e9d16112d134dbd69aefa4fe32c4
-      internalID: 1617481676
+      spriteID: 34318ff3eadf4784a891566642091a6b
+      internalID: 923354391
       vertices: []
       indices: 
       edges: []
@@ -280,7 +280,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 64e4bde405bf4fc4694a86d335eeebd8
+    spriteID: e1a589d085e3a1d46becb31662beed5b
     internalID: 0
     vertices: []
     indices: 
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Nachito_torret_Idle_0: 19413010
-      Nachito_torret_Idle_1: -177273572
-      Nachito_torret_Idle_2: -174065784
-      Nachito_torret_Idle_3: 1136996421
-      Nachito_torret_Idle_4: -1432934264
-      Nachito_torret_Idle_5: -612742988
-      Nachito_torret_Idle_6: -303438925
-      Nachito_torret_Idle_7: 1617481676
+      Nachito_torret_atk_0: -1323107574
+      Nachito_torret_atk_1: 1779657896
+      Nachito_torret_atk_2: 318431192
+      Nachito_torret_atk_3: -275129595
+      Nachito_torret_atk_4: 1140658840
+      Nachito_torret_atk_5: 37339111
+      Nachito_torret_atk_6: 2007071697
+      Nachito_torret_atk_7: 923354391
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
