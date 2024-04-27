@@ -15,26 +15,33 @@ public class Enemy_IA : MonoBehaviour
     [SerializeField] private GameObject tank;
     [SerializeField] private GameObject melee;
     [SerializeField] private GameObject range;
+    [SerializeField] private float indextime;
+    [SerializeField] private float actionspeed;
     //Acceso al wave manager
     //WaveManager.instance
     // economy.instance.moneyS
     void Update()
     {
-        switch (Choice())
+        if (indextime > actionspeed)
         {
-            case 1:
-                PlaceTorret();
-                break;
-            case 2:
-                Placeunit(choiceLine);
-                break;
-            case 3:
-                PlaceEconomy();
-                break;
-            default:
-                Debug.Log("waiting");
-                break;
+            switch (Choice())
+            {
+                case 1:
+                    PlaceTorret();
+                    break;
+                case 2:
+                    Placeunit(choiceLine);
+                    break;
+                case 3:
+                    PlaceEconomy();
+                    break;
+                default:
+                    Debug.Log("waiting");
+                    break;
+            }
+            indextime = 0;
         }
+        indextime += Time.deltaTime;
     }
 
     //calculed the enemies total amoundt
@@ -157,7 +164,43 @@ public class Enemy_IA : MonoBehaviour
     void PlaceEconomy()
     {
         Debug.Log("Economy");
-        Economy_IA.instance.MoneyUpgrade();
+        if(Economy_IA.instance.upgradecount < 5)
+        {
+            Economy_IA.instance.MoneyUpgrade();
+        }
+        else
+        {
+            defaultSpawn();
+        }
+    }
+
+    void defaultSpawn()
+    {
+        int auxRandomUnit, auxRandomLine;
+        auxRandomUnit = Random.Range(1, 4);
+        auxRandomLine = Random.Range(0, 5);
+        switch(auxRandomUnit)
+        {
+            case 1:
+                Debug.Log("Tank" + auxRandomUnit);
+                Spawners_IA.instance.ChangeUnitToSpawn(tank);
+                Spawners_IA.instance.IA_Spawns(auxRandomLine);
+                break;
+            case 2:
+                Debug.Log("Melee" + auxRandomUnit);
+                Spawners_IA.instance.ChangeUnitToSpawn(melee);
+                Spawners_IA.instance.IA_Spawns(auxRandomLine);
+                break;
+            case 3:
+                Debug.Log("Range" + auxRandomUnit);
+                Spawners_IA.instance.ChangeUnitToSpawn(range);
+                Spawners_IA.instance.IA_Spawns(auxRandomLine);
+                break;
+            default:
+                Spawners_IA.instance.ChangeUnitToSpawn(melee);
+                Spawners_IA.instance.IA_Spawns(auxRandomLine);
+                break;
+        }
     }
     #endregion 
 }

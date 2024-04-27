@@ -4452,6 +4452,8 @@ MonoBehaviour:
   tank: {fileID: 8563378234007486516, guid: 8054529ca34c95a4784341cd15b7d2a5, type: 3}
   melee: {fileID: 4459294433934975864, guid: 5bae36a343439dc4bbb35c0d187e36c4, type: 3}
   range: {fileID: 9028332695129244196, guid: febc50a393f13a447ba88a6b8d3d21fd, type: 3}
+  indextime: 0
+  actionspeed: 2
 --- !u!4 &1539968459
 Transform:
   m_ObjectHideFlags: 0

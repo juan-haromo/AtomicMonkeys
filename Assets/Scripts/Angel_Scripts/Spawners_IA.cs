@@ -27,7 +27,6 @@ public class Spawners_IA : MonoBehaviour
         {
             case 0:
                 SpawnUnit(unitToSpawn, 0);
-                //Economy_IA.instance.Buy(unitToSpawn.GetComponentInChildren<Stats>().Cost);
                 break;
             case 1:
                 SpawnUnit(unitToSpawn, 1);
