@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 3378139691676083750}
   m_Layer: 0
   m_Name: CatTankEn
-  m_TagString: Ally
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,6 +300,7 @@ MonoBehaviour:
   health: 50
   stats: {fileID: 8450440439324117712}
   tagToAttack: Ally
+  enemy: {fileID: 0}
   attackSpeed: 0
   indextime: 0
 --- !u!65 &3405113327184549988

@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 3001969156118565222}
   m_Layer: 0
   m_Name: CatRangedEn
-  m_TagString: Ally
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

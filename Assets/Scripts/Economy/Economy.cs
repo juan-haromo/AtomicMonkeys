@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class Economy : MonoBehaviour
 {
     public TextMeshProUGUI moneyDisplay;
-    public float money=0;
-    public float moneyValue=1;
+    public float money = 0;
+    public float moneyValue = 1;
     public static Economy instance;
     public float upgradeCost;
     public int upgradeCount = 1;
@@ -16,15 +16,15 @@ public class Economy : MonoBehaviour
     // Update is called once per frame
     private void Awake()
     {
-        if (instance == null )
-        {instance=this; }
+        if (instance == null)
+        { instance = this; }
         else
         { Destroy(this); }
     }
     void Update()
     {
 
-        money +=(moneyValue * Time.deltaTime);
+        money += (moneyValue * Time.deltaTime);
         moneyDisplay.text = "Money= " + (int)money;
 
     }
@@ -44,12 +44,13 @@ public class Economy : MonoBehaviour
     {
 
         if (money > cost)
-        { Economy.instance.money -= cost;
+        {
+            Economy.instance.money -= cost;
             return true;
         }
         StartCoroutine(CantBuy());
         return false;
-    
+
     }
     private IEnumerator CantBuy()
     {

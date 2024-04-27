@@ -29,11 +29,9 @@ public class UnitMovement : MonoBehaviour
         {
             transicions.Walking();
             Movement();
-            Debug.Log("collelere collele collele");
         }
         else
         {
-            Debug.Log("es hora de atacar");
             attack();
 
             if (indextime > attackSpeed)
