@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 09601de225a76934ebf8da6a3d2f421a
+guid: 096a72e81220c7146a0f9a7cc79cae72
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nachito_torret_Idle_0
+      name: gorila_Tank_death_0
       rect:
         serializedVersion: 2
-        x: 77
-        y: 72
-        width: 116
-        height: 116
+        x: 27
+        y: 21
+        width: 203
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fb49cc0dc18a104589ecdc0242c2563
-      internalID: 19413010
+      spriteID: b4483118df1a58048b8008bcbca39fcd
+      internalID: 1358568385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_1
+      name: gorila_Tank_death_1
       rect:
         serializedVersion: 2
-        x: 357
-        y: 72
-        width: 116
-        height: 116
+        x: 283
+        y: 21
+        width: 204
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6414e6d2edf26aa4792b777e74cd51bd
-      internalID: -177273572
+      spriteID: 471647babef807c488239c39a8a2ba99
+      internalID: 1651558469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_2
+      name: gorila_Tank_death_2
       rect:
         serializedVersion: 2
-        x: 637
-        y: 72
-        width: 115
-        height: 118
+        x: 539
+        y: 21
+        width: 203
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8479df6c069b782488f7a0048a5eea57
-      internalID: -174065784
+      spriteID: 35e92e383e6014846ac45a042b5724ce
+      internalID: -275766840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_3
+      name: gorila_Tank_death_3
       rect:
         serializedVersion: 2
-        x: 917
-        y: 72
-        width: 115
-        height: 118
+        x: 795
+        y: 21
+        width: 203
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07714a3de583d1444ae5212bf476cb2c
-      internalID: 1136996421
+      spriteID: ff36295b76f95734498d6f877270fd81
+      internalID: 901425271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_4
+      name: gorila_Tank_death_4
       rect:
         serializedVersion: 2
-        x: 1197
-        y: 72
-        width: 115
-        height: 122
+        x: 1051
+        y: 21
+        width: 203
+        height: 214
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d48eda5b5fc8e3e48aca24b3cf5100b8
-      internalID: -1432934264
+      spriteID: b733d9af3507fef4ab4e0a32680442f6
+      internalID: 219172360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_5
+      name: gorila_Tank_death_5
       rect:
         serializedVersion: 2
-        x: 1477
-        y: 72
-        width: 115
-        height: 122
+        x: 1307
+        y: 21
+        width: 203
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52f548e99626c4944817851a84c600b8
-      internalID: -612742988
+      spriteID: af0d0866149c9a84c93338648aeee2e7
+      internalID: -438519833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_6
+      name: gorila_Tank_death_6
       rect:
         serializedVersion: 2
-        x: 1757
-        y: 72
-        width: 115
-        height: 118
+        x: 1563
+        y: 21
+        width: 204
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9335eea8824f21440b38b66c6326575d
-      internalID: -303438925
+      spriteID: e46336f4bd9798641b540d6eebe74496
+      internalID: -688185946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nachito_torret_Idle_7
+      name: gorila_Tank_death_7
       rect:
         serializedVersion: 2
-        x: 2037
-        y: 72
-        width: 115
-        height: 118
+        x: 1819
+        y: 2
+        width: 203
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +271,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1c1e9d16112d134dbd69aefa4fe32c4
-      internalID: 1617481676
+      spriteID: 1379dbf7f9b1f3143a9b624f87acdfcb
+      internalID: -1377598083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gorila_Tank_death_8
+      rect:
+        serializedVersion: 2
+        x: 2075
+        y: 2
+        width: 204
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e5b9d60f6e0854c801e434a9492953
+      internalID: -1994015113
       vertices: []
       indices: 
       edges: []
@@ -280,7 +301,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 64e4bde405bf4fc4694a86d335eeebd8
+    spriteID: 8f9fed5e257d098469988525ea3cb203
     internalID: 0
     vertices: []
     indices: 
@@ -288,14 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Nachito_torret_Idle_0: 19413010
-      Nachito_torret_Idle_1: -177273572
-      Nachito_torret_Idle_2: -174065784
-      Nachito_torret_Idle_3: 1136996421
-      Nachito_torret_Idle_4: -1432934264
-      Nachito_torret_Idle_5: -612742988
-      Nachito_torret_Idle_6: -303438925
-      Nachito_torret_Idle_7: 1617481676
+      gorila_Tank_death_0: 1358568385
+      gorila_Tank_death_1: 1651558469
+      gorila_Tank_death_2: -275766840
+      gorila_Tank_death_3: 901425271
+      gorila_Tank_death_4: 219172360
+      gorila_Tank_death_5: -438519833
+      gorila_Tank_death_6: -688185946
+      gorila_Tank_death_7: -1377598083
+      gorila_Tank_death_8: -1994015113
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
