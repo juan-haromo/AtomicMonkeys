@@ -35,6 +35,7 @@ Transform:
   m_LocalScale: {x: 0.69064, y: 1.5755521, z: 0.69064}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2291153125940269115}
   - {fileID: 8943579832877815720}
   - {fileID: 5338501744864157281}
   m_Father: {fileID: 0}
@@ -157,6 +158,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7718706864550159373}
+--- !u!1 &5279384571103356959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2291153125940269115}
+  - component: {fileID: 7871178044825128146}
+  - component: {fileID: 4346169356333764217}
+  m_Layer: 0
+  m_Name: disparo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2291153125940269115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5279384571103356959}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.4479324, y: 0.63469815, z: 1.4479324}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7435043329301847464}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7871178044825128146
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5279384571103356959}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.678215, y: 1, z: 1.8690138}
+  m_Center: {x: 0.8391068, y: 0, z: 0.020178022}
+--- !u!114 &4346169356333764217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5279384571103356959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd841370ba667ea43961fee9f9ea0d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disparo: {fileID: 779634129092594812, guid: aeefe63f5d922af49aa3c85d188cb241, type: 3}
+  target: {fileID: 0}
+  canShoot: 0
+  indexTime: 0
+  attackSpeed: 2
+  torretDamage: 2
 --- !u!1 &8073291433339915010
 GameObject:
   m_ObjectHideFlags: 0
