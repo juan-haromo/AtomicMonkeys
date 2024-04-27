@@ -47,7 +47,7 @@ public class Spawners_IA : MonoBehaviour
     }
     public void SpawnUnit(GameObject _unitToSpwan, int positionToSpwan)
     {
-        if (Economy_IA.instance.Buy(_unitToSpwan.GetComponentInChildren<Stats>().Cost))
+        if (Economy.instance.Buy(_unitToSpwan.GetComponentInChildren<Stats>().Cost))
         {
             Instantiate(_unitToSpwan, spawnPoints[positionToSpwan].position, _unitToSpwan.transform.rotation);
             unitToSpawn = null;
