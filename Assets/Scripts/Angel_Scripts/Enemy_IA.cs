@@ -21,9 +21,6 @@ public class Enemy_IA : MonoBehaviour
     [SerializeField] private List<GameObject> frondknodes;
 
 
-    //Acceso al wave manager
-    //WaveManager.instance
-    // economy.instance.moneyS
     void Update()
     {
         if (indextime > actionspeed)
@@ -86,6 +83,19 @@ public class Enemy_IA : MonoBehaviour
         }
         return _totalLines;
     }
+
+    bool canBuiltfirstTorret()
+    {
+        for (int i = 0; i <= TOTALLINES; i++) 
+        {
+            if (backnodes[i].GetComponent<Note_IA>().candBuild())
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     // here will choice whats gonna do
     int Choice()
     {
@@ -119,9 +129,21 @@ public class Enemy_IA : MonoBehaviour
     // here will place the torret
     void PlaceTorret()
     {
-        Debug.Log("place torret");
-        DefenseManager_IA.instance.objecToBuild = false;
-        backnodes[0].GetComponent<Note_IA>().BuildTurret();
+        if (canBuiltfirstTorret())
+        {
+            int range = UnityEngine.Random.Range(0, 10);
+            if (backnodes[range].GetComponent<Note_IA>().candBuild())
+            {
+                Debug.Log("construyendo torreta");
+                DefenseManager_IA.instance.objecToBuild = false;
+                backnodes[range].GetComponent<Note_IA>().BuildTurret();
+            }
+            else
+            {
+                DefenseManager_IA.instance.objecToBuild = true;
+                frondknodes[range].GetComponent<Note_IA>().BuildTurret();
+            }
+        }
     }
     // here will place an unit
     void Placeunit(int line)
