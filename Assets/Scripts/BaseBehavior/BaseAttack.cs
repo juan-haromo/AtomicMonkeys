@@ -20,6 +20,7 @@ public class BaseAttack : MonoBehaviour
     private bool isMultiTarget;
     public DetectionRangeScript detectionRangeScript;
     private bool isShooting;
+    private int rotationIndex;
 
     //Estas quiza podrian estar en otro script llamado BaseDefense o algo asi
     public BaseHealth baseHealth;
@@ -29,15 +30,8 @@ public class BaseAttack : MonoBehaviour
     void Start()
     {
         isShooting = false;
-        isMultiTarget = false;
-        currentBullet = basicBulletPrefab;
-        bulletRate = 1f;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        TemporalInputs();
+        rotationIndex = 0;
+        SwitchWeapon();
     }
 
     private void shootBullet()
@@ -90,16 +84,10 @@ public class BaseAttack : MonoBehaviour
         isShooting = false;
     }
 
-    private void HealBase()
+    public void SwitchWeapon()
     {
-        baseHealth.ChangeHealth(healAmmount);
-    }
-
-    private void TemporalInputs()
-    {
-        if (Input.GetKeyUp(KeyCode.Alpha1))
+        if(rotationIndex == 0)
         {
-            //Princess
             if (isShooting == true)
             {
                 StopShooting();
@@ -112,18 +100,17 @@ public class BaseAttack : MonoBehaviour
             currentBullet = basicBulletPrefab;
             bulletRate = 1f;
         }
-        if (Input.GetKeyUp(KeyCode.Alpha2))
+        else if(rotationIndex == 1)
         {
-            //Canoneer
             if (isShooting == true)
             {
                 StopShooting();
                 isMultiTarget = false;
-                if(targetTag == "Enemy")
+                if (targetTag == "Enemy")
                 {
                     currentBullet = enemyExplosiveBulletPrefab;
                 }
-                else if(targetTag == "Ally")
+                else if (targetTag == "Ally")
                 {
                     currentBullet = allyExplosiveBulletPrefab;
                 }
@@ -141,9 +128,8 @@ public class BaseAttack : MonoBehaviour
             }
             bulletRate = 2f;
         }
-        if (Input.GetKeyUp(KeyCode.Alpha3))
+        else if(rotationIndex == 2)
         {
-            //Dager Duchess
             if (isShooting == true)
             {
                 StopShooting();
@@ -156,9 +142,10 @@ public class BaseAttack : MonoBehaviour
             currentBullet = smallBulletPrefab;
             bulletRate = 0.3f;
         }
-        if (Input.GetKeyUp(KeyCode.Alpha4))
+        rotationIndex++;
+        if(rotationIndex >= 3)
         {
-            HealBase();
+            rotationIndex = 0;
         }
     }
 }
