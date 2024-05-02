@@ -39,7 +39,7 @@ public class Spawner : MonoBehaviour
             SpawnUnit(unitToSpawn, 3);
             
         }
-        if (Input.GetKeyUp(KeyCode.T))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             SpawnUnit(unitToSpawn, 4);
             
